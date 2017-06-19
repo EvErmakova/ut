@@ -1,0 +1,148 @@
+.widget.widget_courses
+    h2.widget__name Курсы
+        .widget__item-text.widget_courses__item-text на 2 февраля 2016
+
+    .row
+
+        .col-md-12.col-sm-6.widget__item.widget_courses__item#valute-tabs
+
+            ul.widget_courses__tab-list
+                li.widget_courses__tab-item
+                    a.link.widget_courses__tab-link(href="#valute-tab-1") Валюта
+                li.widget_courses__tab-item
+                    a.link.widget_courses__tab-link(href="#valute-tab-2") Металлы
+
+            table.table.widget_courses__table#valute-tab-1
+                tr
+                    th.table__th(width="35")
+                    th.table__th Покупка
+                    th.table__th Продажа
+                    th.table__th ЦБ РФ
+                tr
+                    td.table__td USD
+                    td.table__td 78,10
+                    td.table__td 79,90
+                    td.table__td 76.3264
+                tr
+                    td.table__td EUR
+                    td.table__td 83,80
+                    td.table__td 87,90
+                    td.table__td 82.8141
+
+            table.table.widget_courses__table#valute-tab-2
+                tr
+                    th.table__th(width="35")
+                    th.table__th Покупка
+                    th.table__th Продажа
+                    th.table__th ЦБ РФ
+                tr
+                    td.table__td AU
+                    td.table__td 2 600,00
+                    td.table__td 2 879,00
+                    td.table__td 2732.89
+                tr
+                    td.table__td AG
+                    td.table__td 37,65
+                    td.table__td 43,53
+                    td.table__td 40.76
+
+            .widget_courses__more-text Обращаем ваше внимание, что курсы валют банка могут меняться в течение дня. <a class="link" href="#">Подробнее</a>
+
+        .col-md-12.col-sm-6.widget__item.widget_courses__item#monets-tabs
+
+            ul.widget_courses__tab-list
+                li.widget_courses__tab-item
+                    a.link.widget_courses__tab-link(href="#monets-tab-1") Драгоценные слитки
+                li.widget_courses__tab-item
+                    a.link.widget_courses__tab-link(href="#monets-tab-2") Монеты
+
+            table.table.widget_courses__table#monets-tab-1
+                tr
+                    th.table__th(width="35")
+                    th.table__th Вес, гр.
+                    th.table__th Продажа
+                    th.table__th ЦБ РФ
+                tr
+                    td.table__td AU
+                    td.table__td 5
+                    td.table__td 0,00
+                    td.table__td 0,00
+                tr
+                    td.table__td
+                    td.table__td 10
+                    td.table__td 0,00
+                    td.table__td 0,00
+                tr
+                    td.table__td
+                    td.table__td 20
+                    td.table__td 0,00
+                    td.table__td 0,00
+                tr
+                    td.table__td
+                    td.table__td 50
+                    td.table__td 0,00
+                    td.table__td 0,00
+                tr
+                    td.table__td
+                    td.table__td 100
+                    td.table__td 0,00
+                    td.table__td 0,00
+                tr
+                    td.table__td
+                    td.table__td 250
+                    td.table__td 0,00
+                    td.table__td 0,00
+                tr
+                    td.table__td
+                    td.table__td 500
+                    td.table__td 0,00
+                    td.table__td 1 729 184,98
+                tr
+                    td.table__td
+                    td.table__td 1000
+                    td.table__td 0,00
+                    td.table__td 3 431 192,20
+                tr
+                    td.table__td AG
+                    td.table__td 500
+                    td.table__td 0,00
+                    td.table__td 0,00
+                tr
+                    td.table__td
+                    td.table__td 1000
+                    td.table__td 0,00
+                    td.table__td 48 096,80
+                tr
+                    td.table__td PT
+                    td.table__td 10
+                    td.table__td 0,00
+                    td.table__td 0,00
+
+            table.table.widget_courses__table#monets-tab-2
+                tr
+                    th.table__th(colspan="3") Георгий Победоносец
+                tr
+                    td.table__td Номинал
+                    td.table__td 50 руб.
+                    td.table__td 3 руб.
+                tr
+                    td.table__td Металл
+                    td.table__td Золото
+                    td.table__td Серебро
+                tr
+                    td.table__td Содержание чистого металла, гр.
+                    td.table__td 7.78
+                    td.table__td 31.1
+                tr
+                    td.table__td Покупка
+                    td.table__td 0,00
+                    td.table__td 0,00
+                tr
+                    td.table__td Продажа
+                    td.table__td 24 500,00
+                    td.table__td 1 700,00
+
+    button.more-btn.visible-xs.js-widget_courses__btn Драгоценные слитки и монеты
+
+script
+    |$(document).ready(function(){$('#valute-tabs,#monets-tabs').tabs();});

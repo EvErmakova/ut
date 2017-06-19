@@ -1,0 +1,18 @@
+.circle-decorate {
+  &__item {
+    position: absolute;
+    height: 370px;
+    width: 370px;
+    background: @c-green-10;
+    border-radius: 100%;
+    &:before {
+      content: '';
+      .center();
+      display: block;
+      height: 470px;
+      width: 470px;
+      background: @c-green-10;
+      border-radius: 100%;
+    }
+  }
+}

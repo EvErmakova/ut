@@ -1,0 +1,27 @@
+.copyright {
+  margin-top: 40px;
+  font-size: @fs-small;
+  line-height: 22px;
+  color: @c-gray;
+  &__text {
+    .copyright {
+      margin: 0;
+    }
+  }
+}
+
+@media(max-width: @screen-sm-max) {
+  .copyright {
+    margin-top: 15px;
+  }
+}
+
+@media(max-width: @screen-xs-max) {
+  .copyright {
+    font-size: @fs-xsmall;
+    line-height: 20px;
+    &__text {
+      margin-bottom: 15px;
+    }
+  }
+}

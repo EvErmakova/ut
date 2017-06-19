@@ -1,0 +1,128 @@
+.page {
+  position: relative;
+  .ff-base();
+  font-size: @fs-base;
+  line-height: 22px;
+  color: @c-black;
+  &__wrapper {
+    margin: 0 auto;
+    padding: 0 30px;
+    max-width: 1230px;
+    .clearfix();
+  }
+  &__block {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    &:first-of-type {
+      margin-top: 35px;
+    }
+    &_services {
+      margin-bottom: 38px;
+      + .page__block {
+        margin-top: 38px;
+      }
+    }
+  }
+  &__name {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    .ff-medium;
+    font-size: @fs-big;
+    line-height: 34px;
+  }
+  &__h2 {
+    margin: 0 0 20px;
+    .ff-base;
+    font-size: @fs-medium;
+    line-height: 28px;
+    color: @c-black;
+  }
+  &__h3 {
+    margin: 0 0 15px;
+    .ff-base;
+    font-size: @fs-base;
+    line-height: 24px;
+  }
+  &__h4 {
+    margin: 0 0 8px;
+    .ff-bold;
+    font-size: @fs-base;
+    line-height: 24px;
+  }
+  &__menu {
+    .link {
+      line-height: 42px;
+      .ff-medium;
+      + .link {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+@media(max-width: @screen-md-max) {
+  .page {
+    font-size: @fs-small;
+    &__h2 {
+      .ff-medium;
+      font-size: 18px;
+    }
+  }
+}
+
+@media(max-width: @screen-sm-max) {
+  .page {
+    &__wrapper {
+      padding: 0 15px;
+    }
+    &__block {
+      margin-top: 40px;
+      margin-bottom: 40px;
+      &_services {
+        margin-bottom: 12px;
+        + .page__block {
+          margin-top: 12px;
+        }
+      }
+    }
+    &__name {
+      font-size: 24px;
+    }
+    &__h2 {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media(max-width: @screen-xs-max) {
+  .page {
+    &__block {
+      margin-top: 30px !important;
+      margin-bottom: 30px;
+      &:last-of-type {
+        margin-bottom: 50px;
+      }
+    }
+    &__name {
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+    &__menu {
+      .text_right {
+        text-align: left;
+      }
+      .toggle {
+        width: 100%;
+        margin-bottom: 9px;
+        .clearfix;
+        &__item {
+          width: 50% !important;
+          text-align: center;
+        }
+      }
+      .search {
+        margin-top: 9px;
+      }
+    }
+  }
+}

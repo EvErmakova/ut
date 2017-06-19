@@ -1,0 +1,127 @@
+.widget {
+  &_courses {
+    &__item-text {
+      display: inline;
+    }
+    &__tab-list {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      border-bottom: 1px solid @c-yellow;
+    }
+    &__tab-item {
+      display: inline-block;
+      line-height: 30px;
+      list-style: none;
+      color: @c-green;
+      &:not(:last-of-type){
+        margin-right: 10px;
+      }
+      &.ui-state-active {
+        color: @c-black !important;
+        cursor: default;
+      }
+    }
+    &__tab-link {
+      &:hover {
+        text-decoration: none; 
+      }
+    }
+    &__table {
+      width: calc(~'100% + 16px');
+      margin: 0 -8px;
+      tr {
+        &:hover {
+          td {
+            background-color: @c-yellow-40;
+          }
+        }
+      }
+      th {
+        padding: 11px 4px;
+        &:first-of-type {
+          padding-left: 8px;
+        }
+        &:last-of-type {
+          padding-right: 8px;
+        }
+      }
+      td {
+        padding: 3px 4px;
+        .transition(.2s);
+        text-align: right;
+        white-space: nowrap;
+        &:first-of-type {
+          .ff-medium();
+          text-align: left;
+          white-space: normal;
+          padding-left: 8px;
+        }
+        &:last-of-type {
+          padding-right: 8px;
+        }
+      }
+      &.ui-tabs-hide {
+        display: none !important;
+      }
+    }
+    &__more-text {
+      margin: 10px 0 20px;
+      font-size: @fs-xsmall;
+      line-height: 16px;
+      color: @c-gray;
+      .link {
+        color: @c-green;
+        font-size: inherit;
+        &:hover {
+          color: @c-red;
+        }
+      }
+    }
+  }
+}
+
+@media(min-width: @screen-sm-min) {
+  .widget {
+    &_courses {
+      &__item {
+        display: block !important;
+      }
+    }
+  }
+}
+
+@media(max-width: @screen-md-max) {
+  .widget {
+    &_courses {
+      &__table {
+        font-size: @fs-xsmall;
+      }
+    }
+  }
+}
+
+@media(max-width: @screen-sm-max) {
+  .widget {
+    &_courses {
+      margin-top: 35px;
+    }
+  }
+}
+
+@media(max-width: @screen-xs-max) {
+  .widget {
+    &_courses {
+      margin-top: 30px;
+      &__item {
+        margin-bottom: 20px;
+        &:last-of-type {
+          display: none;
+        }
+      }
+      &__tab-link {
+        .ff-bold();
+      }
+    }
+  }
+}

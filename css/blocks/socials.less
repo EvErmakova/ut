@@ -1,0 +1,68 @@
+.socials {
+  &__name {
+    margin-bottom: 5px;
+    font-size: @fs-small;
+    line-height: 28px;
+    color: @c-gray;
+  }
+  &__btn {
+    position: relative;
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+    border-radius: 100%;
+    background-color: @c-dark-beige;
+    .transition(.2s);
+    &:not(:last-of-type) {
+      margin-right: 8px;
+    }
+    &:hover {
+      opacity: .7;
+    }
+    .icon {
+      .center();
+    }
+  }
+  &__shop-link {
+    display: inline-block;
+    height: 40px;
+    width: 130px;
+    &:not(:last-of-type) {
+      margin-right: 10px;
+    }
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    .transition(.2s);
+    &_apple {
+      background-image: url('@{img}/icons/apple.png');
+    }
+    &_google {
+      background-image: url('@{img}/icons/google.png');
+    }
+    &:hover {
+      opacity: .7;
+    }
+  }
+}
+
+@media(max-width: @screen-sm-max) {
+  .socials {
+    &__item {
+      margin-top: 20px;
+    }
+    &__shop-link {
+      margin: 0 10px;
+    }
+  }
+}
+
+@media(max-width: @screen-xs-max) {
+  .socials {
+    &__name {
+      font-size: @fs-xsmall;
+      line-height: 20px;
+    }
+  }
+}

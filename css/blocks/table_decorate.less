@@ -1,0 +1,110 @@
+.table_decorate {
+  display: table;
+  width: 100%;
+  font-size: @fs-small;
+  &__tr {
+    display: table-row;
+    .transition(.3s);
+    &:not(:first-of-type):hover {
+      background: @c-beige;
+    }
+  }
+  &__th,
+  &__td {
+    display: table-cell;
+    padding: 9px 20px 7px;
+  }
+  &__th {
+    border-top: 1px solid @c-yellow;
+    border-bottom: 1px solid @c-yellow;
+    color: @c-gray;
+  }
+  &__td {
+    border-bottom: 1px solid @c-lite-gray;
+  }
+}
+
+.table_office {
+  .table_decorate {
+    &__th,
+    &__td {
+      &:nth-of-type(3) {
+        text-align: right;
+        white-space: nowrap;
+      }
+      &:nth-of-type(4) {
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+@media(max-width: @screen-sm-max) {
+  .table_decorate {
+    margin-bottom: 15px;
+    &__wrap {
+      margin-bottom: -15px;
+      overflow-x: scroll;
+    }
+    &__tr {
+      display: table-cell;
+      &:not(:first-of-type):hover {
+        background: transparent;
+      }
+      &:last-of-type {
+        .table_decorate {
+          &__td {
+            border-right: 0;
+          }
+        }
+      }
+    }
+    &__th,
+    &__td {
+      display: block;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    &__th {
+      width: 75px;
+      padding-left: 0;
+      border-top: 0;
+      border-bottom: 0;
+      border-right: 1px solid @c-yellow;
+      .shadow(9px 0px 8px -3px rgba(50, 50, 50, 0.07));
+      font-size: @fs-xsmall;
+      white-space: normal !important;
+    }
+    &__td {
+      border-right: 1px solid @c-lite-gray;
+      &:last-of-type {
+        border-bottom: 0;
+      }
+    }
+  }
+  .table_office {
+    .table_decorate {
+      &__th,&__td {
+        &:nth-of-type(1) {
+          height: 83px;
+        }
+      }
+      &__th,&__td {
+        &:nth-of-type(2) {
+          height: 83px;
+        }
+      }
+      &__th,&__td {
+        &:nth-of-type(3) {
+          height: 61px;
+          text-align: left;
+        }
+      }
+      &__th,&__td {
+        &:nth-of-type(4) {
+          height: 83px;
+        }
+      }
+    }
+  }
+}

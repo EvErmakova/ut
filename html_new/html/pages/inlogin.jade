@@ -1,0 +1,65 @@
+doctype html
+html
+    head
+        include ../partials/meta/meta
+        title Верстка
+        link(rel="stylesheet" href="../../css/style.css")
+        script(type="text/javascript" src="../js/libs/jquery-3.1.1.min.js")
+        script(type="text/javascript" src="../js/libs/jquery-ui.min.js")
+        script(type="text/javascript" src="../js/libs/modernizr.js")
+        script(type="text/javascript" src="../../asBannerConstructorPlugin/js/jquery.mousewheel.js")
+        script(type="text/javascript" src="../js/libs/bootstrap.min.js")
+        script(type="text/javascript" src="../js/libs/bootstrap-select.js")
+        script(type="text/javascript" src="../js/libs/jquery.touchSwipe.min.js")
+        script(type="text/javascript" src="../js/scroller.js")
+        script(type="text/javascript" src="../js/menu.js")
+        script(type="text/javascript" src="../js/popup.js")
+        script(type="text/javascript" src="../js/accordion.js")
+        script(type="text/javascript" src="../js/toggle.js")
+        script(type="text/javascript" src="../js/widgets.js")
+        script(type="text/javascript" src="../js/mobile.js")
+        script(type="text/javascript" src="../../js/jquery.ui.datepicker-ru.js")
+        block includes
+
+    body.page
+
+        block header
+            include ../partials/header_login
+
+        block menu
+            include ../partials/menu_top
+            include ../partials/menu_main
+
+        block content
+
+            include ../partials/scroller/scroller_main
+
+            .page__wrapper
+
+                .page__block.page__block_services
+
+                    include ../partials/widgets/widget_services
+
+                .row.page__block
+
+                    .col-md-4.col-sm-6
+                        include ../partials/widgets/widget_news
+
+                    .col-md-5.col-sm-6
+                        include ../partials/widgets/widget_actions
+
+                    .col-md-3.col-sm-12
+                        include ../partials/widgets/widget_courses
+
+        block footer
+            include ../partials/footer
+
+        block popup
+
+            .shadow.js-shadow
+                include ../partials/popup/popup_bank
+                include ../partials/popup/popup_call
+                include ../partials/popup/popup_login
+                include ../partials/popup/popup_phone
+                include ../partials/popup/popup_question
+                block popups

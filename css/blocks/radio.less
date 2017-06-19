@@ -1,0 +1,38 @@
+.radio {
+    display: none;
+    + label {
+        position: relative;
+        top: -1px;
+        margin: 0 5px 0 0;
+        height: 20px;
+        width: 20px;
+        border: 1px solid;
+        border-radius: 100%;
+        .shadow(inset 0px 0px 5px 0px rgba(5, 6, 6, 0.1));
+        cursor: pointer;
+        vertical-align: middle;
+        + label {
+            display: inline;
+            margin-bottom: 0;
+        }
+    }
+    &:not(checked) {
+        + label {
+            border-color: @c-lite-gray;
+        }
+    }
+    &:checked {
+        + label {
+            border-color: @c-green;
+            background: @c-green;
+            &:after {
+                content: '';
+                .center();
+                width: 10px;
+                height: 10px;
+                background: #fff;
+                border-radius: 100%;
+            }
+        }
+    }
+}

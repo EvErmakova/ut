@@ -1,0 +1,24 @@
+.popup.js-popup_login
+    button.popup__close.js-popup__close
+    .popup__header
+        .popup__name Авторизация
+    .popup__body
+        form.form
+            .form__item
+                label.form__label(for="email") Email:
+                input.input#email(type="text")
+            .form__item
+                label.form__label(for="password") Пароль:
+                input.input#password(type="password")
+            .form__item
+                input.checkbox#rememberme(type="checkbox")
+                label(for="rememberme")
+                label.form__label.fs_small(for="rememberme") Запомнить меня
+            .form__btns
+                button.btn.btn_bg_green-gradient Войти
+                a.btn.btn_b-color_yellow(href="#") Забыли пароль?
+    .popup__footer
+        p.fs_small.color_gray Если у вас еще нет личного кабинета, то зарегистрируйтесь
+        a.link.link_color_green.popup__link(href="#")
+            span.icon.icon_person-plus-g.link__icon
+            span.dotted Регистрация нового клиента

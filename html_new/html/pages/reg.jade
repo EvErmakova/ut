@@ -1,0 +1,482 @@
+//Страница регистрации
+
+extends ../layouts/main
+
+//----------------------------------------------------------------------------------------------------
+
+append content
+
+    .page__wrapper
+
+        .page__block
+
+            h1.page__name Регистрация личного кабинета
+
+            .row
+
+                .col-md-9.js-tabs
+
+                    ul.toggle
+                        li.toggle__switch.js-toggle__switch
+                        li.toggle__item.js-toggle__item
+                            a.toggle__item-link(href="#registration-tab-1") Физическое лицо
+                        li.toggle__item.js-toggle__item
+                            a.toggle__item-link(href="#registration-tab-2") Юридическое лицо
+
+                    form.form.form_big#registration-tab-1
+
+                        fieldset.form__row
+
+                            .row
+
+                                .col-sm-4.form__item
+
+                                    label.form__label(for="surname") Фамилия: <span class="form__important">*</span>
+
+                                    input.input#surname(type="text")
+
+                                .col-sm-4.form__item
+
+                                    label.form__label(for="name") Имя: <span class="form__important">*</span>
+
+                                    input.input#name(type="text")
+
+                                .col-sm-4.form__item
+
+                                    label.form__label(for="patronymic") Отчество: <span class="form__important">*</span>
+
+                                    input.input#patronymic(type="text")
+
+                                .tip
+
+                                    .tip__cloud Введите ваши фамилию, имя и отчество
+
+                        fieldset.form__row
+
+                            .row
+
+                                .col-sm-4.form__item
+
+                                    label.form__label(for="region") Регион: <span class="form__important">*</span>
+
+                                    input.input#region(type="text")
+
+                                .col-sm-4.form__item
+
+                                    label.form__label(for="city") Город: <span class="form__important">*</span>
+
+                                    input.input#city(type="text")
+
+                        fieldset.form__row
+
+                            .row
+
+                                .col-sm-4.form__item
+
+                                    label.form__label(for="date") Дата рождения: <span class="form__important">*</span>
+
+                                    input.input#date(type="text" name="reg_fiz[birthday]")
+
+                                    script
+
+                                        |$(function() {
+                                        |$("input[name=\"reg_fiz[birthday]\"]").datepicker($.extend({startDate: "26.10.1896",endDate: "27.10.2002",dateFormat: "dd.mm.yy",changeMonth: 1,yearRange: "1896:2002",changeYear: 1,buttonImage: "/images/icons/svg/calendar.svg",defaultDate: "-14y -1m",showOn: "both",buttonImageOnly: 1}, $.datepicker.regional["ru"]));
+                                        |$("input[name=\"reg_fiz[birthday]\"]").datepicker('option', 'buttonText', '' );
+                                        |//$("input[name=\"reg_fiz[birthday]\"]").datepicker('option', 'dateFormat', 'dd.mm.yy' );
+                                        |//$("input[name=\"reg_fiz[birthday]\"]").datepicker('option', 'showAnim', 'fadeIn' );
+                                        |});
+
+                        fieldset.form__row
+
+                            .row
+
+                                .col-sm-4.form__item
+
+                                    label.form__label(for="email") Email: <span class="form__important">*</span>
+
+                                    input.input#email(type="text")
+
+                        fieldset.form__row
+
+                            .row
+
+                                .col-sm-4.form__item
+
+                                    label.form__label(for="password") Пароль: <span class="form__important">*</span>
+
+                                    input.input#password(type="password")
+
+                                .col-sm-4.form__item
+
+                                    label.form__label(for="repeatpassword") Повторите пароль: <span class="form__important">*</span>
+
+                                    input.input#repeatpassword(type="password")
+
+                                .tip
+
+                                    .tip__cloud Пароль должен состоять более, чем из 6 символов
+
+                        fieldset.form__row
+
+                            .form__item
+
+                                .row
+
+                                    .col-sm-4
+
+                                        label.form__label(for="phone") Мобильный телефон: <span class="form__important">*</span>
+
+                                        input.input#phone(type="text")
+
+                                    .col-btn
+
+                                        button.btn.btn_bg_gray.btn_little Получить код
+
+                                    .col-sm-3
+
+                                        label.form__label(for="sms") SMS-код: <span class="form__important">*</span>
+
+                                        input.input#sms(type="text")
+
+                        .form__btns
+                            button.btn.btn_bg_green-gradient Зарегистрироваться
+
+                    form.form.form_big#registration-tab-2
+
+                        fieldset.form__row
+
+                            .row
+
+                                .col-sm-4.form__item
+
+                                    label.form__label(for="surname") Фамилия: <span class="form__important">*</span>
+
+                                    input.input#surname(type="text")
+
+                                .col-sm-4.form__item
+
+                                    label.form__label(for="name") Имя: <span class="form__important">*</span>
+
+                                    input.input#name(type="text")
+
+                                .col-sm-4.form__item
+
+                                    label.form__label(for="patronymic") Отчество: <span class="form__important">*</span>
+
+                                    input.input#patronymic(type="text")
+
+                                .tip
+
+                                    .tip__cloud Введите ваши фамилию, имя и отчество
+
+                        fieldset.form__row
+
+                            .row
+
+                                .col-sm-4.form__item
+
+                                    label.form__label(for="region") Регион: <span class="form__important">*</span>
+
+                                    input.input#region(type="text")
+
+                                .col-sm-4.form__item
+
+                                    label.form__label(for="city") Город: <span class="form__important">*</span>
+
+                                    input.input#city(type="text")
+
+                        fieldset.form__row
+
+                            .row
+
+                                .col-sm-4.form__item
+
+                                    label.form__label(for="email") Email: <span class="form__important">*</span>
+
+                                    input.input#email(type="text")
+
+                        fieldset.form__row
+
+                            .row
+
+                                .col-sm-4.form__item
+
+                                    label.form__label(for="password") Пароль: <span class="form__important">*</span>
+
+                                    input.input#password(type="password")
+
+                                .col-sm-4.form__item
+
+                                    label.form__label(for="repeatpassword") Повторите пароль: <span class="form__important">*</span>
+
+                                    input.input#repeatpassword(type="password")
+
+                        fieldset.form__row
+
+                            .form__item
+
+                                .row
+
+                                    .col-sm-4
+
+                                        label.form__label(for="phone") Мобильный телефон: <span class="form__important">*</span>
+
+                                        input.input#phone(type="text")
+
+                                    .col-btn
+
+                                        button.btn.btn_bg_gray.btn_little Получить код
+
+                                    .col-sm-3
+
+                                        label.form__label(for="sms") SMS-код: <span class="form__important">*</span>
+
+                                        input.input#sms(type="text")
+
+                        fieldset.form__row
+
+                            .row
+
+                                .col-sm-6.form__item
+
+                                    label.form__label Организационно-правовая форма: <span class="form__important">*</span>
+
+                                    select.selectpicker
+                                        option(value="1") ООО
+                                        option(value="2") ОАО
+                                        option(value="3") ИП
+                                        option(value="4") ЗАО
+                                        option(value="5") Другое
+
+                                .tip
+
+                                    .tip__cloud Укажите организационно-правовую форму вашей компании, в соответствии со свидетельством ОГРН
+
+                        fieldset.form__row
+
+                            .row
+
+                                .col-sm-6.form__item
+
+                                    label.form__label(for="organization") Наименование организации: <span class="form__important">*</span>
+
+                                    input.input#organization(type="text")
+
+                                .tip
+
+                                    .tip__cloud Введите название вашей компании без указания организационно-правовой формы
+
+                        fieldset.form__row
+
+                            .row
+
+                                .col-sm-4.form__item
+
+                                    label.form__label(for="inn") ИНН: <span class="form__important">*</span>
+
+                                    input.input#inn(type="text")
+
+                                .tip
+
+                                    .tip__cloud Укажите ИНН организации
+
+                        fieldset.form__row
+
+                            .row
+
+                                .col-sm-6.form__item
+
+                                    label.form__label(for="post_dir") Должность руководителя организации: <span class="form__important">*</span>
+
+                                    input.input#post_dir(type="text")
+
+                                .tip
+
+                                    .tip__cloud Укажите должность того, кто имеет право подписывать документы
+
+                        fieldset.form__row
+
+                            .row
+
+                                .col-sm-6.form__item
+
+                                    label.form__label(for="name_dir") ФИО руководителя: <span class="form__important">*</span>
+
+                                    input.input#name_dir(type="text")
+
+                                .tip
+
+                                    .tip__cloud Укажите ФИО того, кто подписывает документы полностью
+
+                        fieldset.form__row
+
+                            .form__item
+
+                                .row
+
+                                    .col-sm-6
+
+                                        label.form__label(for="base") Действует на основании: <span class="form__important">*</span>
+
+                                        input.input#base(type="text")
+
+                                    .col-btn
+
+                                        span.link.link_color_green.dotted Устава
+                                        span.link.link_color_green.dotted Свидетельства о регистрации
+                                        span.link.link_color_green.dotted Доверенности
+
+                                    .tip
+
+                                        .tip__cloud Укажите, на основании какого документа действует руководитель огрганизации
+
+                        fieldset.form__row
+
+                            .form__name Юридический адрес
+
+                                .tip
+
+                                    .tip__cloud Введите фактический адрес компании
+
+                            .row
+
+                                .col-sm-4.form__item
+
+                                    label.form__label(for="ur_index") Почтовый индекс: <span class="form__important">*</span>
+
+                                    input.input#ur_index(type="text")
+
+                            .row
+
+                                .col-sm-4.form__item
+
+                                    label.form__label(for="ur_region") Регион: <span class="form__important">*</span>
+
+                                    input.input#ur_region(type="text")
+
+                                .col-sm-4.form__item
+
+                                    label.form__label(for="ur_city") Город: <span class="form__important">*</span>
+
+                                    input.input#ur_city(type="text")
+
+                            .row
+
+                                .col-sm-4.form__item
+
+                                    label.form__label(for="ur_city") Улица: <span class="form__important">*</span>
+
+                                    input.input#ur_city(type="text")
+
+                                .col-sm-4.form__item
+
+                                    label.form__label(for="ur_home") Дом: <span class="form__important">*</span>
+
+                                    input.input#ur_home(type="text")
+
+                                .col-sm-2.form__item
+
+                                    label.form__label(for="ur_corp") Корпус:
+
+                                    input.input#ur_corp(type="text")
+
+                                .col-sm-2.form__item
+
+                                    label.form__label(for="ur_office") Офис:
+
+                                    input.input#ur_office(type="text")
+
+                        fieldset.form__row
+
+                            .form__name Фактический адрес
+
+                                .tip
+
+                                    .tip__cloud Введите фактический адрес компании
+
+                            .form__item
+
+                                input.checkbox#same_address(type="checkbox")
+                                label(for="same_address")
+                                label.form__label(for="same_address") Фактический адрес совпадает с юридическим
+
+                                .tip
+
+                                    .tip__cloud При совпадении юридического и фактического адресов поставьте галочку
+
+                            .row
+
+                                .col-sm-4.form__item
+
+                                    label.form__label(for="fiz_index") Почтовый индекс: <span class="form__important">*</span>
+
+                                    input.input#fiz_index(type="text")
+
+                            .row
+
+                                .col-sm-4.form__item
+
+                                    label.form__label(for="fiz_region") Регион: <span class="form__important">*</span>
+
+                                    input.input#fiz_region(type="text")
+
+                                .col-sm-4.form__item
+
+                                    label.form__label(for="fiz_city") Город: <span class="form__important">*</span>
+
+                                    input.input#fiz_city(type="text")
+
+                            .row
+
+                                .col-sm-4.form__item
+
+                                    label.form__label(for="fiz_city") Улица: <span class="form__important">*</span>
+
+                                    input.input#fiz_city(type="text")
+
+                                .col-sm-4.form__item
+
+                                    label.form__label(for="fiz_home") Дом: <span class="form__important">*</span>
+
+                                    input.input#fiz_home(type="text")
+
+                                .col-sm-2.form__item
+
+                                    label.form__label(for="fiz_corp") Корпус:
+
+                                    input.input#fiz_corp(type="text")
+
+                                .col-sm-2.form__item
+
+                                    label.form__label(for="fiz_office") Офис:
+
+                                    input.input#fiz_office(type="text")
+
+                        .form__btns
+                            button.btn.btn_bg_green-gradient Зарегистрироваться
+
+                .col-md-3
+
+                    .tizer.hidden-sm
+
+                        .tizer__name Зачем регистрировать личный кабинет на сайте&nbsp;УТБ?
+
+                        ul.list.tizer__list
+
+                            li.list__item.tizer__item
+
+                                span.icon.icon_reg-1.tizer__icon
+
+                                |Все заполненные вами анкеты хранятся в личном кабинете — поэтому вам не придется вводить одни и те же данные дважды.
+
+                            li.list__item.tizer__item
+
+                                span.icon.icon_reg-2.tizer__icon
+
+                                |Вы сможете в любой момент времени отследить статус вашей заявки не выходя из дома.
+
+                            li.list__item.tizer__item
+
+                                span.icon.icon_reg-3.tizer__icon
+
+                                |Первыми узнавайте о проводимых акциях и специальных предложениях.

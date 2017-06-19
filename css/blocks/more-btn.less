@@ -1,0 +1,22 @@
+.more-btn {
+  display: block;
+  width: 100%;
+  padding: 7px;
+  background: @c-lite-gray;
+  .ff-bold();
+  font-size: @fs-base;
+  line-height: 26px;
+  color: @c-green;
+  text-align: center;
+  cursor: pointer;
+  &:after {
+    content: '';
+    .icon();
+    .icon_arrow-l();
+  }
+  &_open {
+    &:after {
+      background-image: url('@{img}icons/svg/arrow-top-l-g.svg');
+    }
+  }
+}

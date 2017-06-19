@@ -1,0 +1,41 @@
+.input {
+  display: inline-block;
+  width: 100%;
+  padding: 8px 15px;
+  border: 1px solid @c-lite-gray;
+  border-radius: 5px;
+  .shadow(none);
+  font-size: @fs-small;
+  line-height: 22px;
+  .transition(.2s);
+  resize: none;
+  &::-webkit-input-placeholder {color: @c-gray;}
+  &::-moz-placeholder          {color: @c-gray;}
+  &:-moz-placeholder           {color: @c-gray;}
+  &:-ms-input-placeholder      {color: @c-gray;}
+  &:focus {
+    border-color: @c-green;
+    .shadow(0px 0px 15px 0px rgba(6, 147, 116, 0.2));
+  }
+  &_b-color{
+    &_yellow {
+      border: 2px solid @c-yellow;
+    }
+  }
+  &_error {
+    border-color: @c-red;
+  }
+  &_ok {
+    background: url('@{img}/icons/svg/check-g.svg') no-repeat 98% center;
+  }
+}
+
+@media(max-width: @screen-xs-max) {
+  .input {
+    display: block;
+    padding: 6px 15px;
+    &_ok {
+      background-position: 96% center;
+    }
+  }
+}

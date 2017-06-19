@@ -1,0 +1,44 @@
+.popup.js-popup_question
+    button.popup__close.js-popup__close
+    .popup__header
+        .popup__name Задать вопрос
+        .popup__anons Оставьте свой вопрос, и мы ответим на него в ближайшее время
+    .popup__body
+        .popup__btns
+            a.btn.btn_b-color_yellow(href="#")
+                span.icon.icon_question-circle.btn__icon
+                |Часто задаваемые вопросы
+        form.form
+            .form__item
+                label.form__label Тип обращения: <span class="form__important">*</span>
+                select.selectpicker
+                    option(value="1") Вопрос специалисту
+                    option(value="2") Благодарность
+                    option(value="3") Жалоба/претензия
+                    option(value="4") Предложение
+            .form__item
+                label.form__label(for="name") Ваше ФИО: <span class="form__important">*</span>
+                input.input#name(type="text")
+            .row
+                .col-md-6.form__item
+                    label.form__label(for="email") E-mail: <span class="form__important">*</span>
+                    input.input#email(type="text")
+                .col-md-6.form__item
+                    label.form__label(for="phone") Телефон: <span class="form__important">*</span>
+                    input.input#phone(type="")
+            .form__item
+                label.form__label(for="comment") Комментарий: <span class="form__important">*</span>
+                textarea.input#comment(rows="3")
+            .form__item
+                label.form__label Выделите серый квадрат: <span class="form__important">*</span>
+                .captcha
+                    .captcha__item
+                        .captcha__callback(rel="f3cd4a" style="background-color:#f3cd4a;")
+                    .captcha__item
+                        .captcha__callback(rel="4882b0" style="background-color:#4882b0;")
+                    .captcha__item.captcha__item_selected
+                        .captcha__callback(rel="b4b4b4" style="background-color:#b4b4b4;")
+                    .captcha__item
+                        .captcha__callback(rel="f27510" style="background-color:#f27510;")
+            .form__btns
+                button.btn.btn_bg_green-gradient Отправить

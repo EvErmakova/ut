@@ -1,0 +1,130 @@
+.steps {
+  .flex;
+  margin: 0 0 30px;
+  &__item {
+    position: relative;
+    padding: 0 20px 0 0;
+    &:before,
+    &:after {
+      content: '';
+      .centerY;
+      display: block;
+      height: 0;
+      width: 0;
+      border-top: 63px solid transparent;
+      border-left: 20px solid;
+      border-bottom: 63px solid transparent;
+      z-index: 1;
+    }
+    &:before {
+      left: 0;
+      border-left-color: @c-white;
+    }
+    &:after {
+      right: 0;
+      border-left-color: @c-yellow;
+    }
+    &:first-of-type {
+      &:before {
+        display: none;
+      }
+      .steps {
+        &__item-wrap {
+          padding-left: 0;
+        }
+      }
+    }
+    &:last-of-type {
+      padding: 0;
+      &:after {
+        display: none;
+      }
+    }
+  }
+  &__item-wrap {
+    position: relative;
+    height: 100%;
+    padding: 30px 20px;
+    background: @c-yellow;
+  }
+  &__number {
+    position: relative;
+    top: 50%;
+    .transform(translateY(-50%));
+    float: left;
+    width: 90px;
+    .ff-light;
+    font-size: 82px;
+    line-height: 82px;
+    text-align: center;
+  }
+  &__text {
+    position: relative;
+    top: 50%;
+    .transform(translateY(-50%));
+    max-width: 210px;
+    margin-left: 90px;
+    font-size: @fs-base;
+    line-height: 22px;
+    p {
+      margin: 0;
+    }
+  }
+}
+
+@media(max-width: @screen-md-max) {
+  .steps {
+    &__text {
+      font-size: 14px;
+    }
+  }
+}
+
+@media(max-width: @screen-sm-max) {
+  .steps {
+    &__item-wrap {
+      min-height: 126px;
+      padding: 20px;
+    }
+    &__number {
+      width: 60px;
+      font-size: 64px;
+      line-height: 64px;
+    }
+    &__text {
+      margin-left: 60px;
+      font-size: 13px;
+    }
+  }
+}
+
+@media(max-width: @screen-xs-max) {
+  .steps {
+    .flex-wrap(wrap);
+    margin-bottom: 20px;
+    &__item {
+      margin-bottom: 20px !important;
+      padding-right: 20px !important;
+      &:before {
+        display: none !important;
+      }
+      &:after {
+        display: block !important;
+      }
+    }
+    &__item-wrap {
+      padding-left: 20px !important;
+    }
+    &__number {
+      width: 35px;
+      font-size: 60px;
+      line-height: 60px;
+      text-align: left;
+    }
+    &__text {
+      margin-left: 55px;
+      font-size: 16px;
+      .ff-bold;
+    }
+  }
+}

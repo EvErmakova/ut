@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <title>Верстка</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <script type="text/javascript" src="../js/libs/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="../js/libs/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../js/libs/modernizr.js"></script>
+    <script type="text/javascript" src="../js/libs/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="../js/libs/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/libs/bootstrap-select.js"></script>
+    <script type="text/javascript" src="../js/libs/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="../js/libs/jquery.ui.datepicker-ru.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="https://api-maps.yandex.ru/2.0/?load=package.full&amp;lang=ru-RU"></script>
+    <script type="text/javascript" src="../js/map.js"></script>
+  </head>
+  <body class="page">
+    <header class="header">
+      <div class="page__wrapper">
+        <div class="row">
+          <div class="col-md-2">
+            <div class="js-panel-btn_mobile"></div><a href="#" class="logo header__logo"><img src="../../images/utblogo.svg" class="logo__img hidden-sm"><img src="../../images/utblogo_mobile.svg" class="logo__img visible-sm"></a>
+          </div>
+          <div class="col-md-10 header__info-blocks">
+            <div class="info-block header__info-block">
+              <button class="info-block__name info-block__btn js-popup_city__btn">Екатеринбург</button>
+              <div class="popup popup_city js-popup_city">
+                <div class="popup__close js-popup__close"></div>
+                <div class="popup__body">
+                  <div class="popup__name popup_city__name">Выбор города</div>
+                  <ul class="popup_city__list">
+                    <li class="popup_city__item">
+                      <div class="popup_city__letter">А</div>
+                      <ul class="popup_city__sublist">
+                        <li class="popup_city__subitem"><a href="#" class="link popup_city__link">Алапаевск</a></li>
+                      </ul>
+                    </li>
+                    <li class="popup_city__item">
+                      <div class="popup_city__letter">Б</div>
+                      <ul class="popup_city__sublist">
+                        <li class="popup_city__subitem"><a href="#" class="link popup_city__link">Богданович</a></li>
+                      </ul>
+                    </li>
+                    <li class="popup_city__item">
+                      <div class="popup_city__letter">В</div>
+                      <ul class="popup_city__sublist">
+                        <li class="popup_city__subitem"><a href="#" class="link popup_city__link">Верхний Уфалей</a></li>
+                        <li class="popup_city__subitem"><a href="#" class="link popup_city__link">Верхняя Пышма</a></li>
+                        <li class="popup_city__subitem"><a href="#" class="link popup_city__link">Волчанск</a></li>
+                      </ul>
+                    </li>
+                    <li class="popup_city__item">
+                      <div class="popup_city__letter">Е</div>
+                      <ul class="popup_city__sublist">
+                        <li class="popup_city__subitem"><a href="#" class="link popup_city__link">Екатеринбург</a></li>
+                      </ul>
+                    </li>
+                    <li class="popup_city__item">
+                      <div class="popup_city__letter">И</div>
+                      <ul class="popup_city__sublist">
+                        <li class="popup_city__subitem"><a href="#" class="link popup_city__link">Ирбит</a></li>
+                      </ul>
+                    </li>
+                    <li class="popup_city__item">
+                      <div class="popup_city__letter">К</div>
+                      <ul class="popup_city__sublist">
+                        <li class="popup_city__subitem"><a href="#" class="link popup_city__link">Каменск-Уральский</a></li>
+                        <li class="popup_city__subitem"><a href="#" class="link popup_city__link">Карпинск</a></li>
+                        <li class="popup_city__subitem"><a href="#" class="link popup_city__link">Качканар</a></li>
+                        <li class="popup_city__subitem"><a href="#" class="link popup_city__link">Краснотурьинск</a></li>
+                        <li class="popup_city__subitem"><a href="#" class="link popup_city__link">Красноуральск</a></li>
+                        <li class="popup_city__subitem"><a href="#" class="link popup_city__link">Красноуфимск</a></li>
+                        <li class="popup_city__subitem"><a href="#" class="link popup_city__link">Курган</a></li>
+                        <li class="popup_city__subitem"><a href="#" class="link popup_city__link">Кувша</a></li>
+                      </ul>
+                    </li>
+                    <li class="popup_city__item">
+                      <div class="popup_city__letter">Л</div>
+                      <ul class="popup_city__sublist">
+                        <li class="popup_city__subitem"><a href="#" class="link popup_city__link">Лесной</a></li>
+                      </ul>
+                    </li>
+                    <li class="popup_city__item">
+                      <div class="popup_city__letter">Н</div>
+                      <ul class="popup_city__sublist">
+                        <li class="popup_city__subitem"><a href="#" class="link popup_city__link">Нижневартовск</a></li>
+                        <li class="popup_city__subitem"><a href="#" class="link popup_city__link">Нижний Тагил</a></li>
+                        <li class="popup_city__subitem"><a href="#" class="link popup_city__link">Нижняя Тура</a></li>
+                      </ul>
+                    </li>
+                    <li class="popup_city__item">
+                      <div class="popup_city__letter">П</div>
+                      <ul class="popup_city__sublist">
+                        <li class="popup_city__subitem"><a href="#" class="link popup_city__link">Пермь</a></li>
+                        <li class="popup_city__subitem"><a href="#" class="link popup_city__link">Полевской</a></li>
+                      </ul>
+                    </li>
+                    <li class="popup_city__item">
+                      <div class="popup_city__letter">Р</div>
+                      <ul class="popup_city__sublist">
+                        <li class="popup_city__subitem"><a href="#" class="link popup_city__link">Ревда</a></li>
+                      </ul>
+                    </li>
+                    <li class="popup_city__item">
+                      <div class="popup_city__letter">С</div>
+                      <ul class="popup_city__sublist">
+                        <li class="popup_city__subitem"><a href="#" class="link popup_city__link">Серов</a></li>
+                        <li class="popup_city__subitem"><a href="#" class="link popup_city__link">Среднеуральск</a></li>
+                        <li class="popup_city__subitem"><a href="#" class="link popup_city__link">Сургут</a></li>
+                      </ul>
+                    </li>
+                    <li class="popup_city__item">
+                      <div class="popup_city__letter">Т</div>
+                      <ul class="popup_city__sublist">
+                        <li class="popup_city__subitem"><a href="#" class="link popup_city__link">Тюмень</a></li>
+                      </ul>
+                    </li>
+                    <li class="popup_city__item">
+                      <div class="popup_city__letter">Ч</div>
+                      <ul class="popup_city__sublist">
+                        <li class="popup_city__subitem"><a href="#" class="link popup_city__link">Челябинск</a></li>
+                      </ul>
+                    </li>
+                    <li class="popup_city__item">
+                      <div class="popup_city__letter">Ш</div>
+                      <ul class="popup_city__sublist">
+                        <li class="popup_city__subitem"><a href="#" class="link popup_city__link">Шадринск</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="header__links js-header__links-1_desktop"><a href="#" class="link link_color_gray header__link"><span class="icon icon_map-marker link__icon"></span>Отделения и банкоматы</a></div>
+            </div>
+            <div class="info-block header__info-block">
+              <button class="link info-block__name js-popup__btn_phone">8-800-1000-767</button>
+              <div class="header__links js-header__links-2_desktop">
+                <button class="link link_color_gray header__link js-popup__btn_call"><span class="icon icon_call link__icon"></span>Перезвоните мне</button>
+                <button class="link link_color_gray header__link js-popup__btn_question"><span class="icon icon_question link__icon"></span>Задать вопрос</button>
+              </div>
+            </div>
+            <div class="header__btns">
+              <button class="btn btn_b-color_gray js-popup__btn_login"><span class="icon icon_person btn__icon"></span>Личный кабинет</button>
+              <button class="btn btn_b-color_yellow js-popup__btn_bank"><span class="icon icon_lock btn__icon"></span>Интернет-банк</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="menu menu_top hidden-sm">
+      <div class="page__wrapper">
+        <div class="js-panel-btn_desktop">
+          <button class="panel-btn js-menu_main__btn"><span class="panel-btn__item panel-btn__item_first"></span><span class="panel-btn__item panel-btn__item_second"></span><span class="panel-btn__item panel-btn__item_third"></span></button>
+        </div>
+        <div class="js-search_desktop">
+          <div class="search_top">
+            <form action="" class="search_top__form js-search__form">
+              <input type="text" placeholder="Поиск по сайту" class="search_top__input"><span class="icon_search search_top__icon"></span>
+            </form>
+          </div>
+        </div>
+        <ul class="menu__list menu_top__list">
+          <li class="menu__item">
+            <div class="menu__item-link menu_top__item-link menu_top__item-link_parent js-submenu__link">Физическим лицам</div>
+            <div class="submenu js-submenu">
+              <ul class="submenu__list js-submenu__list">
+                <li class="submenu__item"><a href="#" class="submenu__item-link">Кредитование</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__item-link">Банковские карты</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__item-link act">Вклады</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__item-link">Интернет-банк</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__item-link">Мобильный банк</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__item-link">Денежные платежи</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__item-link">Переводы</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__item-link">Платежи</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__item-link">Обмен валюты</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__item-link">Драгоценные металлы</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__item-link">Индивидуальные сейфовые ячейки</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__item-link">Векселя</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__item-link">Кредитная история</a></li>
+              </ul>
+              <button class="submenu__btn js-submenu__btn">Ещё</button>
+            </div>
+          </li>
+          <li class="menu__item">
+            <div class="menu__item-link menu_top__item-link menu_top__item-link_parent js-submenu__link">Юридическим лицам</div>
+            <div class="submenu js-submenu">
+              <ul class="submenu__list js-submenu__list">
+                <li class="submenu__item"><a href="#" class="submenu__item-link">Кредитование бизнеса</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__item-link">Расчетно-кассовое обслуживание</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__item-link">ИТ-сервисы для бизнеса</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__item-link">Зарплатный проект</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__item-link">Корпоративные карты</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__item-link">ИнтерКлиент</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__item-link">Торговый эквайринг</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__item-link">Инкассация</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__item-link">Валютный контроль</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__item-link">Депозиты</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__item-link">Векселя</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__item-link">Документарные операции</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__item-link">Индивидуальные сейфовые ячейки</a></li>
+              </ul>
+              <button class="submenu__btn js-submenu__btn">Ещё</button>
+            </div>
+          </li>
+          <li class="menu__item"><a href="#" class="menu__item-link menu_top__item-link">О банке</a></li>
+          <li class="menu__item"><a href="#" class="menu__item-link menu_top__item-link act">Новости</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="menu menu_main js-menu_main">
+      <div class="menu_main__header visible-sm">
+        <div class="js-search_mobile"></div>
+        <div class="menu_main__links">
+          <div class="js-header__links-1_mobile"></div>
+          <div class="js-header__links-2_mobile"></div>
+        </div>
+      </div>
+      <ul class="menu__list menu_main__list">
+        <li class="menu_main__item">
+          <div class="menu__item-link menu_main__item-link menu_main__item-link_parent">Физическим лицам&nbsp;</div>
+          <ul class="menu__list menu_main__list menu_main__list_children">
+            <li class="menu_main__item">
+              <div class="menu__item-link menu_main__item-link menu_main__item-link_parent">Кредитование&nbsp;<span class="menu_main__item-icon"></span></div>
+              <ul class="menu__list menu_main__list menu_main__list_children">
+                <li class="menu_main__item">
+                  <div class="menu__item-link menu_main__item-link menu_main__item-link_parent">Нецелевое кредитование&nbsp;<span class="menu_main__item-icon"></span></div>
+                  <ul class="menu__list menu_main__list menu_main__list_children">
+                    <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Потребительский кредит без обеспечения&nbsp;</a></li>
+                    <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Потребительский кредит с обеспечением&nbsp;</a></li>
+                    <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Рассчитать кредит&nbsp;</a></li>
+                  </ul>
+                </li>
+                <li class="menu_main__item">
+                  <div class="menu__item-link menu_main__item-link menu_main__item-link_parent">Кредитные карты&nbsp;<span class="menu_main__item-icon"></span></div>
+                  <ul class="menu__list menu_main__list menu_main__list_children">
+                    <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Кредитная карта с льготным периодом кредитования&nbsp;</a></li>
+                    <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Кредитная карта вкладчика&nbsp;</a></li>
+                    <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Заявка на кредитную карту&nbsp;</a></li>
+                  </ul>
+                </li>
+                <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Рассчитать кредит&nbsp;</a></li>
+                <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Кредитная история&nbsp;</a></li>
+                <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Информация о страховании&nbsp;</a></li>
+                <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Документы&nbsp;</a></li>
+              </ul>
+            </li>
+            <li class="menu_main__item">
+              <div class="menu__item-link menu_main__item-link menu_main__item-link_parent">Банковские карты&nbsp;<span class="menu_main__item-icon"></span></div>
+              <ul class="menu__list menu_main__list menu_main__list_children">
+                <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">VISA Unembossed&nbsp;</a></li>
+                <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">VISA Сlassic&nbsp;</a></li>
+                <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">VISA Classic с фото&nbsp;</a></li>
+                <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">VISA Gold&nbsp;</a></li>
+                <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">VISA Gold с фото&nbsp;</a></li>
+                <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">VISA Unembossed Instant Issue&nbsp;</a></li>
+                <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Акции&nbsp;</a></li>
+                <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Дополнительные сервисы&nbsp;</a></li>
+                <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">ЕКАРТА&nbsp;</a></li>
+                <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Заявка на карту&nbsp;</a></li>
+                <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Часто задаваемые вопросы по банковским картам&nbsp;</a></li>
+              </ul>
+            </li>
+            <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Вклады&nbsp;</a></li>
+            <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Интернет-банк&nbsp;</a></li>
+            <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Денежные переводы&nbsp;</a></li>
+            <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Платежи&nbsp;</a></li>
+            <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Обмен валюты&nbsp;</a></li>
+            <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Драгоценные металлы&nbsp;</a></li>
+            <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Индивидуальные сейфы&nbsp;</a></li>
+            <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link act">Векселя&nbsp;</a></li>
+            <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Тарифы для физических лиц&nbsp;</a></li>
+          </ul>
+        </li>
+        <li class="menu_main__item">
+          <div class="menu__item-link menu_main__item-link menu_main__item-link_parent">Юридическим лицам&nbsp;</div>
+          <ul class="menu__list menu_main__list menu_main__list_children">
+            <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Кредитование бизнеса&nbsp;</a></li>
+            <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Расчетно-кассовое обслуживание&nbsp;</a></li>
+            <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Система ИнтерКлиент&nbsp;</a></li>
+            <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Зарплатный проект&nbsp;</a></li>
+            <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Валютный контроль&nbsp;</a></li>
+            <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Корпоративные карты&nbsp;</a></li>
+            <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Эквайринг&nbsp;</a></li>
+            <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Депозиты&nbsp;</a></li>
+            <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Векселя&nbsp;</a></li>
+            <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Документарные операции&nbsp;</a></li>
+            <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Инкассация&nbsp;</a></li>
+            <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Индивидуальные сейфы&nbsp;</a></li>
+            <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Тарифы для юридических лиц&nbsp;</a></li>
+            <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">IT-сервисы для бизнеса&nbsp;</a></li>
+          </ul>
+        </li>
+        <li class="menu_main__item">
+          <div class="menu__item-link menu_main__item-link menu_main__item-link_parent">О банке&nbsp;</div>
+          <ul class="menu__list menu_main__list menu_main__list_children">
+            <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Миссия УТБ сегодня&nbsp;</a></li>
+            <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">История банка&nbsp;</a></li>
+            <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Установочные сведения&nbsp;</a></li>
+            <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Сведения о бухгалтерской и финансовой отчетности&nbsp;</a></li>
+            <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Прочая информация, обязательная к раскрытию&nbsp;</a></li>
+            <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Опросы&nbsp;</a></li>
+            <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Часто задаваемые вопросы&nbsp;</a></li>
+            <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Защита персональных данных&nbsp;</a></li>
+          </ul>
+        </li>
+        <li class="menu_main__item">
+          <div class="menu__item-link menu_main__item-link menu_main__item-link_parent">Новости&nbsp;</div>
+          <ul class="menu__list menu_main__list menu_main__list_children">
+            <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Акции&nbsp;</a></li>
+            <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Пресса о нас&nbsp;</a></li>
+          </ul>
+        </li>
+        <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Карьера в УТБ&nbsp;</a></li>
+        <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Продажа залогового имущества&nbsp;</a></li>
+        <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Архив журнала «Наш банк»&nbsp;</a></li>
+        <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Идеи&nbsp;</a></li>
+        <li class="menu_main__item"><a href="#" class="menu__item-link menu_main__item-link">Личный кабинет&nbsp;</a></li>
+      </ul>
+    </div>
+    <div class="page__wrapper">
+      <div class="page__block">
+        <h1 class="page__name">Офисы и банкоматы</h1>
+        <div class="js-tabs">
+          <div class="row page__menu">
+            <div class="col-md-5 col-sm-4">
+              <ul class="toggle">
+                <li class="toggle__switch js-toggle__switch"></li>
+                <li class="toggle__item"><a href="#maps-tab-1" class="toggle__item-link js-toggle__item">Офисы</a></li>
+                <li class="toggle__item"><a href="#maps-tab-2" class="toggle__item-link js-toggle__item">Банкоматы</a></li>
+              </ul><a href="#" class="link link_color_green ff-medium hidden-sm"><span class="icon icon_main-office-g link__icon"></span>Головной офис</a>
+            </div>
+            <div class="col-md-7 col-sm-8 text_right">
+              <div class="row">
+                <div class="col-md-6 col-sm-7"><a href="#" class="link link_color_green ff-medium visible-sm"><span class="icon icon_main-office-g link__icon"></span>Головной офис</a><a href="#" class="link link_color_green ff-medium"><span class="file file_yellow">xls</span>Скачать</a><a href="#" class="link link_color_green ff-medium hidden-sm"><span class="icon icon_print-g link__icon"></span>Напечатать</a></div>
+                <div class="col-md-6 col-sm-5">
+                  <div class="search">
+                    <form class="search__form">
+                      <input type="text" placeholder="Найти" class="input input_b-color_yellow search__input"><span class="icon_search-g search__icon"></span>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="maps-tab-1">
+            <form class="filter">
+              <div class="more-btn visible-sm js-accordion__btn">Выбор услуг</div>
+              <div class="accordion_mobile js-accordion">
+                <div class="row">
+                  <div class="col-lg-2 col-sm-3 col-xs-6">
+                    <div class="filter__item">
+                      <input type="checkbox" id="filter1" checked class="checkbox">
+                      <label for="filter1"></label>
+                      <label for="filter1">Сейчас работает&nbsp;<span class="color_gray">(46)</span></label>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-sm-3 col-xs-6">
+                    <div class="filter__item">
+                      <input type="checkbox" id="filter2" class="checkbox">
+                      <label for="filter2"></label>
+                      <label for="filter2">Денежные переводы&nbsp;<span class="color_gray">(49)</span></label>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-sm-3 col-xs-6">
+                    <div class="filter__item">
+                      <input type="checkbox" id="filter3" class="checkbox">
+                      <label for="filter3"></label>
+                      <label for="filter3">Банковские карты&nbsp;<span class="color_gray">(49)</span></label>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-sm-3 col-xs-6">
+                    <div class="filter__item">
+                      <input type="checkbox" id="filter4" class="checkbox">
+                      <label for="filter4"></label>
+                      <label for="filter4">Индивидуальные сейфовые ячейки&nbsp;<span class="color_gray">(3)</span></label>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-sm-3 col-xs-6">
+                    <div class="filter__item">
+                      <input type="checkbox" id="filter5" class="checkbox">
+                      <label for="filter5"></label>
+                      <label for="filter5">Платежи&nbsp;<span class="color_gray">(49)</span></label>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-sm-3 col-xs-6">
+                    <div class="filter__item">
+                      <input type="checkbox" id="filter6" class="checkbox">
+                      <label for="filter6"></label>
+                      <label for="filter6">Векселя&nbsp;<span class="color_gray">(4)</span></label>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-sm-3 col-xs-6">
+                    <div class="filter__item">
+                      <input type="checkbox" id="filter7" class="checkbox">
+                      <label for="filter7"></label>
+                      <label for="filter7">Драгоценные металлы&nbsp;<span class="color_gray">(17)</span></label>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-sm-3 col-xs-6">
+                    <div class="filter__item">
+                      <input type="checkbox" id="filter8" class="checkbox">
+                      <label for="filter8"></label>
+                      <label for="filter8">Кредитование&nbsp;<span class="color_gray">(49)</span></label>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-sm-3 col-xs-6">
+                    <div class="filter__item">
+                      <input type="checkbox" id="filter9" class="checkbox">
+                      <label for="filter9"></label>
+                      <label for="filter9">Кредитование бизнеса&nbsp;<span class="color_gray">(50)</span></label>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-sm-3 col-xs-6">
+                    <div class="filter__item">
+                      <input type="checkbox" id="filter10" class="checkbox">
+                      <label for="filter10"></label>
+                      <label for="filter10">Обмен валюты&nbsp;<span class="color_gray">(48)</span></label>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-sm-3 col-xs-6">
+                    <div class="filter__item">
+                      <input type="checkbox" id="filter11" class="checkbox">
+                      <label for="filter11"></label>
+                      <label for="filter11">Расчетно-кассовое обслуживание&nbsp;<span class="color_gray">(48)</span></label>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-sm-3 col-xs-6">
+                    <div class="filter__item">
+                      <input type="checkbox" id="filter12" class="checkbox">
+                      <label for="filter12"></label>
+                      <label for="filter12">Валютный контроль&nbsp;<span class="color_gray">(4)</span></label>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-sm-3 col-xs-6">
+                    <div class="filter__item">
+                      <input type="checkbox" id="filter13" class="checkbox">
+                      <label for="filter13"></label>
+                      <label for="filter13">Интерклиент&nbsp;<span class="color_gray">(49)</span></label>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-sm-3 col-xs-6">
+                    <div class="filter__item">
+                      <input type="checkbox" id="filter14" class="checkbox">
+                      <label for="filter14"></label>
+                      <label for="filter14">Интернет-банк&nbsp;<span class="color_gray">(49)</span></label>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-sm-3 col-xs-6">
+                    <div class="filter__item">
+                      <input type="checkbox" id="filter15" class="checkbox">
+                      <label for="filter15"></label>
+                      <label for="filter15">Мобильный банк&nbsp;<span class="color_gray">(46)</span></label>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-sm-3 col-xs-6">
+                    <div class="filter__item">
+                      <input type="checkbox" id="filter16" checked class="checkbox">
+                      <label for="filter16"></label>
+                      <label for="filter16">Зарплатный проект&nbsp;<span class="color_gray">(40)</span></label>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-sm-3 col-xs-6">
+                    <div class="filter__item">
+                      <input type="checkbox" id="filter17" class="checkbox">
+                      <label for="filter17"></label>
+                      <label for="filter17">Корпоративные карты&nbsp;<span class="color_gray">(48)</span></label>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-sm-3 col-xs-6">
+                    <div class="filter__item">
+                      <input type="checkbox" id="filter18" class="checkbox">
+                      <label for="filter18"></label>
+                      <label for="filter18">Торговый эквайринг&nbsp;<span class="color_gray">(44)</span></label>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-sm-3 col-xs-6">
+                    <div class="filter__item">
+                      <input type="checkbox" id="filter19" class="checkbox">
+                      <label for="filter19"></label>
+                      <label for="filter19">Инкассация&nbsp;<span class="color_gray">(19)</span></label>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-sm-3 col-xs-6">
+                    <div class="filter__item">
+                      <input type="checkbox" id="filter20" class="checkbox">
+                      <label for="filter20"></label>
+                      <label for="filter20">Вклады&nbsp;<span class="color_gray">(47)</span></label>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-sm-3 col-xs-6">
+                    <div class="filter__item">
+                      <input type="checkbox" id="filter21" class="checkbox">
+                      <label for="filter21"></label>
+                      <label for="filter21">Депозиты&nbsp;<span class="color_gray">(31)</span></label>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-sm-3 col-xs-6">
+                    <div class="filter__item">
+                      <input type="checkbox" id="filter22" class="checkbox">
+                      <label for="filter22"></label>
+                      <label for="filter22">Векселя&nbsp;<span class="color_gray">(4)</span></label>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-sm-3 col-xs-6">
+                    <div class="filter__item">
+                      <input type="checkbox" id="filter23" class="checkbox">
+                      <label for="filter23"></label>
+                      <label for="filter23">Документарные операции&nbsp;<span class="color_gray">(9)</span></label>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-sm-3 col-xs-12">
+                    <button class="btn btn_bg_gray btn_little filter__btn">Сбросить<span class="icon icon_arrow-repeat-g btn__icon_right"></span></button>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="js-tabs">
+              <div class="text_center">
+                <ul class="toggle_l">
+                  <li class="toggle_l__item"><a href="#office-tab-1" class="toggle_l__item-link">Карта</a></li>
+                  <li class="toggle_l__switch js-toggle_l__switch">
+                    <div class="toggle_l__switcher"><span></span></div>
+                  </li>
+                  <li class="toggle_l__item"><a href="#office-tab-2" class="toggle_l__item-link">Список</a></li>
+                </ul>
+              </div>
+              <div id="office-tab-1">
+                <div id="map"></div>
+              </div>
+              <div id="office-tab-2">
+                <div class="table_decorate__wrap">
+                  <div class="table_decorate table_office">
+                    <div class="table_decorate__tr">
+                      <div class="table_decorate__th">Отделение</div>
+                      <div class="table_decorate__th">Адрес</div>
+                      <div class="table_decorate__th">Телефон</div>
+                      <div class="table_decorate__th">График работы</div>
+                    </div>
+                    <div class="table_decorate__tr">
+                      <div class="table_decorate__td"><a href="#" class="link link_color_green js-popup__btn_office">Дополнительный офис №5 ПАО "Уралтрансбанк"</a></div>
+                      <div class="table_decorate__td"><a href="#" class="link link_color_green">Екатеринбург - ул.&nbsp;Азина, д.&nbsp;42</a></div>
+                      <div class="table_decorate__td"><span class="color_gray">+7 (343)</span>&nbsp;370-15-71<br>&nbsp;353-87-52</div>
+                      <div class="table_decorate__td"><span>Пн - Пт: 09:00 - 19:00</span><br><span>Сб: 10:00 - 17:00</span><br><span class="color_gray">Вс: выходной</span></div>
+                    </div>
+                    <div class="table_decorate__tr">
+                      <div class="table_decorate__td"><a href="#" class="link link_color_green js-popup__btn_office">Дополнительный офис №3 ПАО "Уралтрансбанк"</a></div>
+                      <div class="table_decorate__td"><a href="#" class="link link_color_green">Екатеринбург - ул.&nbsp;Академика Шварца, 10, корп.&nbsp;1</a></div>
+                      <div class="table_decorate__td"><span class="color_gray">+7 (343)</span>&nbsp;214-76-05</div>
+                      <div class="table_decorate__td"><span>Пн - Пт: 09:00 - 19:00</span><br><span class="color_gray">Сб: выходной</span><br><span class="color_gray">Вс: выходной</span></div>
+                    </div>
+                    <div class="table_decorate__tr">
+                      <div class="table_decorate__td"><a href="#" class="link link_color_green js-popup__btn_office">Дополнительный офис №6 ПАО "Уралтрансбанк"</a></div>
+                      <div class="table_decorate__td"><a href="#" class="link link_color_green">Екатеринбург - ул.&nbsp;Заводская, д.&nbsp;12</a></div>
+                      <div class="table_decorate__td"><span class="color_gray">+7 (343)</span>&nbsp;232-54-94</div>
+                      <div class="table_decorate__td"><span>Пн - Пт: 09:00 - 19:00</span><br><span class="color_gray">Сб: выходной</span><br><span class="color_gray">Вс: выходной</span></div>
+                    </div>
+                    <div class="table_decorate__tr">
+                      <div class="table_decorate__td"><a href="#" class="link link_color_green js-popup__btn_office">Центральный офис ПАО "Уралтрансбанк"</a></div>
+                      <div class="table_decorate__td"><a href="#" class="link link_color_green">Екатеринбург - ул.&nbsp;Мельковская, 2б</a></div>
+                      <div class="table_decorate__td"><span class="color_gray">+7 (343)</span>&nbsp;232-54-94</div>
+                      <div class="table_decorate__td"><span>Пн - Пт: 09:00 - 19:00</span><br><span class="color_gray">Сб: выходной</span><br><span class="color_gray">Вс: выходной</span></div>
+                    </div>
+                    <div class="table_decorate__tr">
+                      <div class="table_decorate__td"><a href="#" class="link link_color_green js-popup__btn_office">Дополнительный офис №2 ПАО "Уралтрансбанк"</a></div>
+                      <div class="table_decorate__td"><a href="#" class="link link_color_green">Екатеринбург - ул.&nbsp;Радищева, д.&nbsp;31</a></div>
+                      <div class="table_decorate__td"><span class="color_gray">+7 (343)</span>&nbsp;379-74-27<br>&nbsp;353-87-52</div>
+                      <div class="table_decorate__td"><span>Пн - Пт: 09:00 - 20:00</span><br><span>Сб, Вс: 10:00 - 17:00</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="maps-tab-2">
+            <form class="filter">
+              <div class="more-btn visible-sm js-accordion__btn">Выбор услуг</div>
+              <div class="accordion_mobile js-accordion">
+                <div class="row">
+                  <div class="col-lg-2 col-sm-3 col-xs-6">
+                    <div class="filter__item">
+                      <input type="checkbox" id="filter21" checked class="checkbox">
+                      <label for="filter21"></label>
+                      <label for="filter21">Сейчас работает&nbsp;<span class="color_gray">(132)</span></label>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-sm-3 col-xs-6">
+                    <div class="filter__item">
+                      <input type="checkbox" id="filter22" class="checkbox">
+                      <label for="filter22"></label>
+                      <label for="filter22">Работает круглосуточно&nbsp;<span class="color_gray">(74)</span></label>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-sm-3 col-xs-6">
+                    <div class="filter__item">
+                      <input type="checkbox" id="filter23" class="checkbox">
+                      <label for="filter23"></label>
+                      <label for="filter23">Внесение наличных&nbsp;<span class="color_gray">(34)</span></label>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-sm-3 col-xs-6">
+                    <div class="filter__item">
+                      <input type="checkbox" id="filter24" class="checkbox">
+                      <label for="filter24"></label>
+                      <label for="filter24">Оплата услуг&nbsp;<span class="color_gray">(143)</span></label>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-sm-3 col-xs-6">
+                    <div class="filter__item">
+                      <input type="checkbox" id="filter25" class="checkbox">
+                      <label for="filter25"></label>
+                      <label for="filter25">Перевод на карту Visa и MasterCard любого банка&nbsp;<span class="color_gray">(49)</span></label>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-sm-3 col-xs-12">
+                    <button class="btn btn_bg_gray btn_little filter__btn">Сбросить<span class="icon icon_arrow-repeat-g btn__icon_right"></span></button>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="js-tabs">
+              <div class="text_center">
+                <ul class="toggle_l">
+                  <li class="toggle_l__item"><a href="#office-tab-1" class="toggle_l__item-link">Карта</a></li>
+                  <li class="toggle_l__switch js-toggle_l__switch">
+                    <div class="toggle_l__switcher"><span></span></div>
+                  </li>
+                  <li class="toggle_l__item"><a href="#office-tab-2" class="toggle_l__item-link">Список</a></li>
+                </ul>
+              </div>
+              <div id="office-tab-1"></div>
+              <div id="office-tab-2">
+                <div class="table_decorate__wrap">
+                  <div class="table_decorate table_office">
+                    <div class="table_decorate__tr">
+                      <div class="table_decorate__th">Отделение</div>
+                      <div class="table_decorate__th">Адрес</div>
+                      <div class="table_decorate__th">Телефон</div>
+                      <div class="table_decorate__th">График работы</div>
+                    </div>
+                    <div class="table_decorate__tr">
+                      <div class="table_decorate__td"><a href="#" class="link link_color_green js-popup__btn_office">Дополнительный офис №5 ПАО "Уралтрансбанк"</a></div>
+                      <div class="table_decorate__td"><a href="#" class="link link_color_green">Екатеринбург - ул.&nbsp;Азина, д.&nbsp;42</a></div>
+                      <div class="table_decorate__td"><span class="color_gray">+7 (343)</span>&nbsp;370-15-71<br>&nbsp;353-87-52</div>
+                      <div class="table_decorate__td"><span>Пн - Пт: 09:00 - 19:00</span><br><span>Сб: 10:00 - 17:00</span><br><span class="color_gray">Вс: выходной</span></div>
+                    </div>
+                    <div class="table_decorate__tr">
+                      <div class="table_decorate__td"><a href="#" class="link link_color_green js-popup__btn_office">Дополнительный офис №3 ПАО "Уралтрансбанк"</a></div>
+                      <div class="table_decorate__td"><a href="#" class="link link_color_green">Екатеринбург - ул.&nbsp;Академика Шварца, 10, корп.&nbsp;1</a></div>
+                      <div class="table_decorate__td"><span class="color_gray">+7 (343)</span>&nbsp;214-76-05</div>
+                      <div class="table_decorate__td"><span>Пн - Пт: 09:00 - 19:00</span><br><span class="color_gray">Сб: выходной</span><br><span class="color_gray">Вс: выходной</span></div>
+                    </div>
+                    <div class="table_decorate__tr">
+                      <div class="table_decorate__td"><a href="#" class="link link_color_green js-popup__btn_office">Дополнительный офис №6 ПАО "Уралтрансбанк"</a></div>
+                      <div class="table_decorate__td"><a href="#" class="link link_color_green">Екатеринбург - ул.&nbsp;Заводская, д.&nbsp;12</a></div>
+                      <div class="table_decorate__td"><span class="color_gray">+7 (343)</span>&nbsp;232-54-94</div>
+                      <div class="table_decorate__td"><span>Пн - Пт: 09:00 - 19:00</span><br><span class="color_gray">Сб: выходной</span><br><span class="color_gray">Вс: выходной</span></div>
+                    </div>
+                    <div class="table_decorate__tr">
+                      <div class="table_decorate__td"><a href="#" class="link link_color_green js-popup__btn_office">Центральный офис ПАО "Уралтрансбанк"</a></div>
+                      <div class="table_decorate__td"><a href="#" class="link link_color_green">Екатеринбург - ул.&nbsp;Мельковская, 2б</a></div>
+                      <div class="table_decorate__td"><span class="color_gray">+7 (343)</span>&nbsp;232-54-94</div>
+                      <div class="table_decorate__td"><span>Пн - Пт: 09:00 - 19:00</span><br><span class="color_gray">Сб: выходной</span><br><span class="color_gray">Вс: выходной</span></div>
+                    </div>
+                    <div class="table_decorate__tr">
+                      <div class="table_decorate__td"><a href="#" class="link link_color_green js-popup__btn_office">Дополнительный офис №2 ПАО "Уралтрансбанк"</a></div>
+                      <div class="table_decorate__td"><a href="#" class="link link_color_green">Екатеринбург - ул.&nbsp;Радищева, д.&nbsp;31</a></div>
+                      <div class="table_decorate__td"><span class="color_gray">+7 (343)</span>&nbsp;379-74-27<br>&nbsp;353-87-52</div>
+                      <div class="table_decorate__td"><span>Пн - Пт: 09:00 - 20:00</span><br><span>Сб, Вс: 10:00 - 17:00</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer__row">
+        <div class="page__wrapper">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="support">
+                <div class="support__item">
+                  <button class="support__name btn btn_b-color_gray support__btn js-popup__btn_phone">8-800-1000-767<span class="support__btn-icon"><span class="icon icon_arrows"></span></span></button>
+                  <div class="support__desc">Звонок по России бесплатный</div>
+                </div>
+                <div class="support__item"><a href="tel:+73433701901" class="link support__name">+7 (343) 370-19-01</a>
+                  <div class="support__desc">Контакт-центр</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="menu menu_footer">
+                <button class="accordion__btn visible-sm js-accordion__btn">Полезные ссылки<span class="icon icon_arrow-l"></span></button>
+                <ul class="menu__list accordion_mobile js-accordion">
+                  <li class="menu_footer__item"><a href="#" class="link menu_footer__item-link">О банке</a></li>
+                  <li class="menu_footer__item"><a href="#" class="link menu_footer__item-link">Реквизиты</a></li>
+                  <li class="menu_footer__item"><a href="#" class="link menu_footer__item-link">Список лиц</a></li>
+                  <li class="menu_footer__item"><a href="#" class="link menu_footer__item-link">Вакансии</a></li>
+                  <li class="menu_footer__item"><a href="#" class="link menu_footer__item-link">Продажа залогового имущества</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="footer__links js-footer__links_desktop"><a href="#" class="link link_color_green footer__link"><span class="icon icon_questions link__icon"></span>Часто задаваемые вопросы</a><a href="#" class="link link_color_green footer__link"><span class="icon icon_idea link__icon"></span>Подать идею</a></div>
+              <div class="socials js-socials_desktop">
+                <div class="socials__item">
+                  <div class="socials__name hidden-sm">Мы в социальных сетях:</div><a href="#" class="socials__btn"><span class="icon icon_vk"></span></a><a href="#" class="socials__btn"><span class="icon icon_ok"></span></a><a href="#" class="socials__btn"><span class="icon icon_fb"></span></a><a href="#" class="socials__btn"><span class="icon icon_tw"></span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__row">
+        <div class="page__wrapper">
+          <button class="accordion__btn visible-sm js-accordion__btn">Дополнительные ссылки<span class="icon icon_arrow-l"></span></button>
+          <div class="row accordion_mobile js-accordion">
+            <ul class="menu__list">
+              <li class="col-md-4"><a href="#" class="link menu_footer__item-link fs_small">Обязательная информация профессионального участника</a></li>
+              <li class="col-md-4"><a href="#" class="link menu_footer__item-link fs_small">Осуществление деятельности по управлению ценными бумагами (по Положению 482-П).</a></li>
+              <li class="col-md-4"><a href="#" class="link menu_footer__item-link fs_small">Информация о максимальных процентных ставках по вкладам физических лиц.</a></li>
+              <li class="col-md-4 visible-sm js-footer__links_mobile"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__row">
+        <div class="page__wrapper">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="info-block"><img src="../../images/icons/ssv.png" alt="" title="Вклады застрахованы" class="info-block__img">
+                <div class="info-block__text">Вклады до&nbsp;1&nbsp;400&nbsp;000&nbsp;<span class="rub">a</span><br/>застрахованы<br/>государством</div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="socials">
+                <div class="socials__item">
+                  <div class="socials__name">Приложения:</div><a href="#" class="socials__shop-link socials__shop-link_apple"></a><a href="#" class="socials__shop-link socials__shop-link_google"></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="footer__logos"><a href="#" class="footer__logo"><img src="../../images/icons/gold-site.png"></a><a href="#" class="footer__logo"><img src="../../images/icons/euro-bank.png"></a><a href="#" class="footer__logo"><img src="../../images/icons/first-ural-bank.png"></a></div>
+            </div>
+          </div>
+          <div class="socials js-socials_mobile"></div>
+          <div class="copyright row">
+            <div class="col-md-8">
+              <div class="copyright__text">© ПАО «Уралтрансбанк», 1991 — 2016 Генеральная лицензия ЦБ РФ № 812</div>
+            </div>
+            <div class="col-md-4">Разработка:&nbsp;<a href="#" class="link link_color_green">Artsofte</a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="shadow js-shadow">
+      <div class="popup popup_big js-popup_bank">
+        <button class="popup__close js-popup__close"></button>
+        <div class="popup__header">
+          <div class="popup__name">Вход в интернет-банк</div>
+          <div class="popup__anons">Интернет-банк — современный, простой и удобный способ управлять своими денежными средствами.</div>
+        </div>
+        <div class="popup__body">
+          <div class="popup__flex-wrap">
+            <div class="popup__ticket">
+              <div class="circle-decorate popup__circle-decorate">
+                <div class="circle-decorate__item"></div>
+                <div class="circle-decorate__item"></div>
+              </div><a href="#" class="link link_color_green popup__name">Для физических лиц<span class="icon icon_new-window-g icon_sub"></span></a>
+              <ul class="list list_ul popup__list">
+                <li class="list__item list_ul__item">Выполнение и планирование платежей и переводов</li>
+                <li class="list__item list_ul__item">Круглосуточный доступ к счетам и картам</li>
+                <li class="list__item list_ul__item">Оплата штрафов ГИБДД, налоговые и бюджетные платежи</li>
+                <li class="list__item list_ul__item">Управление вкладами и кредитами</li>
+              </ul><a href="#" class="btn btn_bg_green-gradient"><span class="icon icon_enter-w btn__icon"></span>Вход</a>
+            </div>
+            <div class="popup__ticket">
+              <div class="circle-decorate popup__circle-decorate">
+                <div class="circle-decorate__item"></div>
+                <div class="circle-decorate__item"></div>
+              </div><a href="#" class="link link_color_green popup__name">Для юридических лиц<span class="icon icon_new-window-g icon_sub"></span></a>
+              <ul class="list list_ul popup__list">
+                <li class="list__item list_ul__item">Управление расчетными счетами</li>
+                <li class="list__item list_ul__item">Статусы документов и выписка online</li>
+                <li class="list__item list_ul__item">Операции в рублях и валюте</li>
+                <li class="list__item list_ul__item">Импорт/экспорт из 1С</li>
+              </ul><a href="#" class="btn btn_bg_green-gradient"><span class="icon icon_enter-w btn__icon"></span>Вход</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup js-popup_call">
+        <button class="popup__close js-popup__close"></button>
+        <div class="popup__header">
+          <div class="popup__name">Перезвоните мне</div>
+          <div class="popup__anons">Оставьте свои координаты, и мы свяжемся с Вами в ближайшее время</div>
+        </div>
+        <div class="popup__body">
+          <form class="form">
+            <div class="form__item">
+              <label for="name" class="form__label">ФИО:</label>
+              <input id="name" type="text" class="input input_error">
+              <div class="form__error">Укажите Ваше имя</div>
+            </div>
+            <div class="form__item">
+              <label for="phone" class="form__label">Телефон:</label>
+              <input id="phone" type="text" class="input input_ok">
+            </div>
+            <div class="form__item">
+              <label for="comment" class="form__label">Комментарий:</label>
+              <input id="comment" type="text" class="input">
+            </div>
+            <div class="form__item">
+              <label class="form__label">Выделите серый квадрат:</label>
+              <div class="captcha">
+                <div class="captcha__item">
+                  <div rel="f3cd4a" style="background-color:#f3cd4a;" class="captcha__callback"></div>
+                </div>
+                <div class="captcha__item">
+                  <div rel="4882b0" style="background-color:#4882b0;" class="captcha__callback"></div>
+                </div>
+                <div class="captcha__item captcha__item_selected">
+                  <div rel="b4b4b4" style="background-color:#b4b4b4;" class="captcha__callback"></div>
+                </div>
+                <div class="captcha__item">
+                  <div rel="f27510" style="background-color:#f27510;" class="captcha__callback"></div>
+                </div>
+              </div>
+            </div>
+            <div class="form__btns">
+              <button class="btn btn_bg_green-gradient">Отправить</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="popup js-popup_login">
+        <button class="popup__close js-popup__close"></button>
+        <div class="popup__header">
+          <div class="popup__name">Авторизация</div>
+        </div>
+        <div class="popup__body">
+          <form class="form">
+            <div class="form__item">
+              <label for="email" class="form__label">Email:</label>
+              <input id="email" type="text" class="input">
+            </div>
+            <div class="form__item">
+              <label for="password" class="form__label">Пароль:</label>
+              <input id="password" type="password" class="input">
+            </div>
+            <div class="form__item">
+              <input id="rememberme" type="checkbox" class="checkbox">
+              <label for="rememberme"></label>
+              <label for="rememberme" class="form__label fs_small">Запомнить меня</label>
+            </div>
+            <div class="form__btns">
+              <button class="btn btn_bg_green-gradient">Войти</button><a href="#" class="btn btn_b-color_yellow">Забыли пароль?</a>
+            </div>
+          </form>
+        </div>
+        <div class="popup__footer">
+          <p class="fs_small color_gray">Если у вас еще нет личного кабинета, то зарегистрируйтесь</p><a href="#" class="link link_color_green popup__link"><span class="icon icon_person-plus-g link__icon"></span><span class="dotted">Регистрация нового клиента</span></a>
+        </div>
+      </div>
+      <div class="popup js-popup_phone">
+        <button class="popup__close js-popup__close"></button>
+        <div class="popup__header">
+          <div class="popup__name">8-800-1000-767</div>
+          <div class="popup__anons">Круглосуточный контакт-центр. Звонок по России бесплатный</div>
+        </div>
+        <div class="popup__body">
+          <div class="popup__btns"><a href="#" class="btn btn_b-color_yellow"><span class="icon icon_headphones btn__icon"></span>Звонок online</a>
+            <button class="btn btn_b-color_yellow js-popup__btn_call"><span class="icon icon_call btn__icon"></span>Перезвонить мне</button>
+          </div>
+          <p>Координаты центрального офиса ПАО «Уралтрансбанк»:</p>
+          <p class="fs_small"><a href="+73433701892" class="link">+7 (343) 370-18-92</a></p>
+          <p class="fs_small">620027, г.Екатеринбург, ул.Мельковская, 2б</p>
+          <p class="fs_small">Пн-Пт: с 09:00 до 19:00<br/><span class="color_gray">Сб,Вс: выходной</span></p>
+          <div class="popup__links"> <a href="#" class="link link_color_green"><span class="icon icon_map-marker-g link__icon"></span>Отделения и банкоматы</a></div>
+        </div>
+      </div>
+      <div class="popup js-popup_question">
+        <button class="popup__close js-popup__close"></button>
+        <div class="popup__header">
+          <div class="popup__name">Задать вопрос</div>
+          <div class="popup__anons">Оставьте свой вопрос, и мы ответим на него в ближайшее время</div>
+        </div>
+        <div class="popup__body">
+          <div class="popup__btns"><a href="#" class="btn btn_b-color_yellow"><span class="icon icon_question-circle btn__icon"></span>Часто задаваемые вопросы</a></div>
+          <form class="form">
+            <div class="form__item">
+              <label class="form__label">Тип обращения: <span class="form__important">*</span></label>
+              <select class="selectpicker">
+                <option value="1">Вопрос специалисту</option>
+                <option value="2">Благодарность</option>
+                <option value="3">Жалоба/претензия</option>
+                <option value="4">Предложение</option>
+              </select>
+            </div>
+            <div class="form__item">
+              <label for="name" class="form__label">Ваше ФИО: <span class="form__important">*</span></label>
+              <input id="name" type="text" class="input">
+            </div>
+            <div class="row">
+              <div class="col-md-6 form__item">
+                <label for="email" class="form__label">E-mail: <span class="form__important">*</span></label>
+                <input id="email" type="text" class="input">
+              </div>
+              <div class="col-md-6 form__item">
+                <label for="phone" class="form__label">Телефон: <span class="form__important">*</span></label>
+                <input id="phone" type="" class="input">
+              </div>
+            </div>
+            <div class="form__item">
+              <label for="comment" class="form__label">Комментарий: <span class="form__important">*</span></label>
+              <textarea id="comment" rows="3" class="input"></textarea>
+            </div>
+            <div class="form__item">
+              <label class="form__label">Выделите серый квадрат: <span class="form__important">*</span></label>
+              <div class="captcha">
+                <div class="captcha__item">
+                  <div rel="f3cd4a" style="background-color:#f3cd4a;" class="captcha__callback"></div>
+                </div>
+                <div class="captcha__item">
+                  <div rel="4882b0" style="background-color:#4882b0;" class="captcha__callback"></div>
+                </div>
+                <div class="captcha__item captcha__item_selected">
+                  <div rel="b4b4b4" style="background-color:#b4b4b4;" class="captcha__callback"></div>
+                </div>
+                <div class="captcha__item">
+                  <div rel="f27510" style="background-color:#f27510;" class="captcha__callback"></div>
+                </div>
+              </div>
+            </div>
+            <div class="form__btns">
+              <button class="btn btn_bg_green-gradient">Отправить</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="popup popup_promo1">
+        <button class="popup__close js-popup__close"></button>
+        <div class="popup__body">Ваше местоположение определилось как <b>г.Москва</b>. УралТрансБанк в&nbsp;данном городе не&nbsp;имеет отделений, поэтому Вам будет показана информация для&nbsp;города центрального офиса банка - Екатеринбурга.</div>
+      </div>
+      <div class="popup popup_promo2">
+        <button class="popup__close js-popup__close"></button>
+        <div class="popup__header">
+          <div class="popup__name">Нам важно ваше мнение о&nbsp;качестве работы сайта</div>
+        </div>
+        <div class="popup__body">
+          <p>Уважаемый клиент, предлагаем вам принять участие в&nbsp;опросе, который займет не&nbsp;более 3&nbsp;мин.</p>
+          <p>Заранее благодарим за&nbsp;ваше участие. Спасибо, что выбрали наш&nbsp;банк своим финансовым партнером.</p>
+          <div class="form__btns">
+            <button class="btn btn_bg_green-gradient">Отправить</button>
+          </div>
+        </div>
+      </div>
+      <div class="popup popup_promo3">
+        <button class="popup__close js-popup__close"></button>
+        <div class="popup__header">
+          <div class="popup__name">Интересна ли вам круглосуточная юридическая онлайн-консультация в&nbsp;любой точке за&nbsp;6&nbsp;рублей в&nbsp;день?</div>
+        </div>
+        <div class="popup__body">
+          <div class="form__btns">
+            <button class="btn btn_bg_green-gradient">Отправить</button>
+          </div>
+        </div>
+      </div>
+      <div class="popup popup_middle js-popup_office">
+        <button class="popup__close js-popup__close"></button>
+        <div class="popup__header">
+          <div class="popup__name">Дополнительный офис № 1 ПАО «Уралтрансбанк»</div>
+        </div>
+        <div class="popup__body">
+          <div class="form__item">
+            <h4 class="page__h4"><span class="icon icon_map-marker btn__icon"></span>Адрес</h4>620017, г. Екатеринбург, пр. Космонавтов, д. 15
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form__item">
+                <h4 class="page__h4"><span class="icon icon_person btn__icon"></span>Обслуживание физических лиц</h4>
+                <p>Пн-Пт: с 09:00 до 18:00<br/><span class="color_gray">Сб, Вс: выходной</span></p>
+                <p><span class="color_gray">+7&nbsp;(343)&nbsp;</span>370-80-24</p>
+                <p class="color_gray">Денежные переводы, Обмен валюты, Платежи, Кредитование, Банковские карты, Вклады, Мобильный банк, Интернет-банк</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form__item">
+                <h4 class="page__h4"><span class="icon icon_case btn__icon"></span>Обслуживание юридических лиц</h4>
+                <p>Пн-Пт: с 09:00 до 17:00<br/><span class="color_gray">Сб, Вс: выходной</span></p>
+                <p><span class="color_gray">+7&nbsp;(343)&nbsp;</span>370-80-24</p>
+                <p class="color_gray">Расчетно-кассовое обслуживание, ИнтерКлиент, Инкассация, Корпоративные карты, Кредитование бизнеса, Валютный контроль</p>
+              </div>
+            </div>
+          </div>
+          <div class="form__item">
+            <h4 class="page__h4">Руководитель подразделения:</h4>Стариков Николай Николаевич; <span class="color_gray">+ 7 (343)</span> 370-80-24
+          </div>
+          <div class="form__item">
+            <h4 class="page__h4">Надзорный орган:</h4>Уральское главное управление Банка России: 620144, г. Екатеринбург, ул. Циолковского, 18. т. (343) 269 65 00, факс (343) 269-66-90 Дата внесения в книгу Госрегистрации: 07.04.1994 г.
+          </div><a href="#" class="link link_color_green hidden-sm"><span class="icon icon_print-g link__icon"></span>Напечатать</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,233 @@
+//Страница регистрации
+
+extends ../layouts/main
+
+block includes
+    script(type="text/javascript" src="../js/credit-calc.js")
+//----------------------------------------------------------------------------------------------------
+
+append content
+
+    .page__wrapper
+
+        ul.breadcrumbs
+            li.breadcrumbs__item
+                a.breadcrumbs__item-link(href="#") Главная
+            li.breadcrumbs__item
+                a.breadcrumbs__item-link(href="#") Юридическим лицам
+            li.breadcrumbs__item
+                a.breadcrumbs__item-link(href="#") Кредитование бизнеса
+            li.breadcrumbs__item
+                span Кредитный калькулятор
+
+        .page__block
+
+            h1.page__name Кредитный калькулятор
+
+            .row
+
+                .col-md-9
+
+                    form.form.form_big.form_calc
+
+                        fieldset.form__row.form__row_main
+
+                            .form__item
+
+                                label.form__label Среднемесячная выручка&nbsp;
+                                    span.rouble.form__info.visible-xs (a)
+                                    |:
+                                input.input.input_b-color_yellow#gain(type="text")
+                                span.rouble.hidden-xs a
+                                .tip
+                                    .tip__cloud В том числе закуп ТМЗ, зар.плата сотрудникам, аренда, транспортные расходы, ремонт, налоговые расходы, прочие, РКО
+                                #slider-gain
+                                .slider__scale
+                                    .slider__scale-item(style="left: 0%;")
+                                        a.slider__scale-link(href="#" rel="0") 0
+                                    .slider__scale-item(style="left: 25%;")
+                                        a.slider__scale-link(href="#" rel="2500000") 2 500 000
+                                    .slider__scale-item(style="left: 50%;")
+                                        a.slider__scale-link(href="#" rel="5000000") 5 000 000
+                                    .slider__scale-item(style="left: 75%;")
+                                        a.slider__scale-link(href="#" rel="7500000") 7 500 000
+                                    .slider__scale-item(style="left: 100%;")
+                                        a.slider__scale-link(href="#" rel="10000000") 10 000 000
+
+                        fieldset.form__row.form__row_main
+
+                            .form__item
+
+                                label.form__label Среднемесячные расходы по бизнесу&nbsp;
+                                    span.rouble.form__info.visible-xs (a)
+                                    |:
+                                input.input.input_b-color_yellow#costs(type="text")
+                                span.rouble.hidden-xs a
+                                #slider-costs
+                                .slider__scale
+                                    .slider__scale-item(style="left: 0%;")
+                                        a.slider__scale-link(href="#" rel="0") 0
+                                    .slider__scale-item(style="left: 25%;")
+                                        a.slider__scale-link(href="#" rel="2500000") 2 500 000
+                                    .slider__scale-item(style="left: 50%;")
+                                        a.slider__scale-link(href="#" rel="5000000") 5 000 000
+                                    .slider__scale-item(style="left: 75%;")
+                                        a.slider__scale-link(href="#" rel="7500000") 7 500 000
+                                    .slider__scale-item(style="left: 100%;")
+                                        a.slider__scale-link(href="#" rel="10000000") 10 000 000
+
+                        fieldset.form__row.form__row_main
+
+                            .form__item
+
+                                label.form__label Ежемесячные платежи по текущим кредитам&nbsp;
+                                    span.rouble.form__info.visible-xs (a)
+                                    |:
+                                input.input.input_b-color_yellow#creditpayments(type="text")
+                                span.rouble.hidden-xs a
+                                .tip
+                                    .tip__cloud В том числе основной долг, проценты по кредиту
+
+                        fieldset.form__row.form__row_main
+
+                            .form__item
+
+                                label.form__label Ежемесячные расходы на смену/изъятие учредителей:
+                                input.input.input_b-color_yellow#founderpayments(type="text")
+                                .tip
+                                    .tip__cloud Расходы, связанные с деятельностью учредителей
+
+                        fieldset.form__row
+
+                            .form__item
+
+                                label.form__label.form__label_big Цель кредита:
+
+                                p
+                                    input.radio#mission1(type="radio" checked="checked" name="mission" value="mission1")
+                                    label(for="mission1")
+                                    label.form__label(for="mission1") Инветсиционные цели
+
+                                p
+                                    input.radio#mission2(type="radio" name="mission" value="mission2")
+                                    label(for="mission2")
+                                    label.form__label(for="mission2") Пополнение оборотных средств
+
+                        fieldset.form__row
+
+                            .form__item
+
+                                label.form__label.form__label_big Предоставление залога:
+
+                                p
+                                    input.radio#deposit1(type="radio" name="deposit" value="deposit1")
+                                    label(for="deposit1")
+                                    label.form__label(for="deposit1") Да
+
+                                p
+                                    input.radio#deposit2(type="radio" checked="checked" name="deposit" value="deposit2")
+                                    label(for="deposit2")
+                                    label.form__label(for="deposit2") Нет
+
+                        fieldset.form__row.form__row_main
+
+                            .form__item
+
+                                label.form__label Желаемый срок кредитования&nbsp;
+                                    span.form__info.visible-xs (месяцев)
+                                    |:
+                                input.input.input_b-color_yellow#time(type="text")
+                                span.hidden-xs месяцев
+                                .tip
+                                    .tip__cloud В том числе закуп ТМЗ, зар.плата сотрудникам, аренда, транспортные расходы, ремонт, налоговые расходы, прочие, РКО
+                                #slider-time
+                                .slider__scale
+                                    .slider__scale-item(style="left: 0%;")
+                                        a.slider__scale-link(href="#" rel="0") 0
+                                    .slider__scale-item(style="left: 25%;")
+                                        a.slider__scale-link(href="#" rel="15") 15
+                                    .slider__scale-item(style="left: 50%;")
+                                        a.slider__scale-link(href="#" rel="30") 30
+                                    .slider__scale-item(style="left: 75%;")
+                                        a.slider__scale-link(href="#" rel="45") 45
+                                    .slider__scale-item(style="left: 100%;")
+                                        a.slider__scale-link(href="#" rel="60") 60
+
+                        fieldset.form__row.form__row_main
+
+                            .form__item
+
+                                label.form__label Отсрочка платежа&nbsp;
+                                    span.form__info.visible-xs (месяцев)
+                                    |:
+                                input.input.input_b-color_yellow(type="text")
+                                span.hidden-xs месяцев
+                                .tip
+                                    .tip__cloud В том числе основной долг, проценты по кредиту
+
+                        fieldset.form__row
+
+                            .form__item
+
+                                .form__btns
+                                    button.btn.btn_bg_green-gradient Рассчитать
+                                    button.btn.btn_b-color_yellow Заявка на кредит
+
+                            .form__item
+
+                                .table_text
+                                    .table_text__row
+                                        .table_text__th Лимит кредитования:
+                                        |2 880 000,00&nbsp;
+                                        span.rouble a
+                                    .table_text__row
+                                        .table_text__th Процентная ставка:
+                                        |19 %
+                                    .table_text__row
+                                        .table_text__th Ежемесячный платеж:
+                                        |265 410,95&nbsp;
+                                        span.rouble a
+
+                    .fs_small.color_gray
+
+                        .page__h3 Калькулятор кредита для бизнеса
+
+                        p Уралтрансбанк осуществляет активную поддержку предпринимателей и бизнеса, и предлагает широкий выбор программ кредитования. Не&nbsp;знаете, какое решение выбрать?
+                        p Калькулятор кредита для&nbsp;бизнеса поможет подобрать оптимальное решение именно для&nbsp;вашей организации.
+
+                .col-md-3
+
+                    .menu_right.hidden-sm
+                        ul.menu__list.menu_right__list
+                            li.menu__item.menu_right__item
+                                a.menu__item-link.menu_right__item-link(href="#") Кредит «Бизнес актив»
+                            li.menu__item.menu_right__item
+                                a.menu__item-link.menu_right__item-link(href="#") Льготный кредит
+                            li.menu__item.menu_right__item
+                                a.menu__item-link.menu_right__item-link(href="#") Финансовая программа при&nbsp;поддержке Пермского центра развития предпринимательства
+                            li.menu__item.menu_right__item
+                                a.menu__item-link.menu_right__item-link(href="#") Кредит «Бизнес оборот»
+                            li.menu__item.menu_right__item
+                                a.menu__item-link.menu_right__item-link(href="#") Овердрафт
+                            li.menu__item.menu_right__item
+                                a.menu__item-link.menu_right__item-link(href="#") Кредит «Микро»
+                            li.menu__item.menu_right__item
+                                a.menu__item-link.menu_right__item-link(href="#") Кредит «Тендерный»
+                            li.menu__item.menu_right__item
+                                a.menu__item-link.menu_right__item-link(href="#") Кредит «На&nbsp;исполнение контракта»
+                            li.menu__item.menu_right__item
+                                a.menu__item-link.menu_right__item-link(href="#") Кредит «На&nbsp;обеспечение обязательств»
+                            li.menu__item.menu_right__item
+                                a.menu__item-link.menu_right__item-link(href="#") Банковская гарантия
+                            li.menu__item.menu_right__item
+                                a.menu__item-link.menu_right__item-link.menu_right__item-link_active(href="#") Кредитный калькулятор
+                            li.menu__item.menu_right__item
+                                a.menu__item-link.menu_right__item-link(href="#") Заявка на&nbsp;кредитование бизнеса
+                            li.menu__item.menu_right__item
+                                a.menu__item-link.menu_right__item-link(href="#") Рамочные формы договоров по&nbsp;кредитам МСБ
+                            li.menu__item.menu_right__item
+                                a.menu__item-link.menu_right__item-link(href="#") Кредит «Программа 17%»
+                            li.menu__item.menu_right__item
+                                a.menu__item-link.menu_right__item-link(href="#") Кредит «Фермерский»
+                            li.menu__item.menu_right__item
+                                a.menu__item-link.menu_right__item-link(href="#") Кредит «Развитие»

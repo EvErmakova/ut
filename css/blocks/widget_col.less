@@ -1,0 +1,44 @@
+.widget {
+  &_col {
+    margin-bottom: -25px;
+    &__item {
+      margin-bottom: 25px;
+    }
+    &__item-icon {
+      height: 60px;
+      margin-bottom: 10px;
+      line-height: 60px;
+      .icon {
+        vertical-align: bottom;
+      }
+      img {
+        position: relative;
+        display: inline-block;
+        max-width: 100%;
+        max-height: 100%;
+        vertical-align: middle;
+      }
+    }
+    &__item-text {
+      margin-top: 13px;
+      p {
+        margin-bottom: 6px;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: @screen-xs-max) {
+  .widget {
+    &_col {
+      &__item-icon {
+        height: auto;
+        margin-bottom: 15px;
+        line-height: inherit;
+      }
+    }
+  }
+}

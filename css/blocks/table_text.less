@@ -1,0 +1,35 @@
+.table {
+    &_text {
+        font-size: 20px;
+        &__row {
+            position: relative;
+            margin-bottom: 10px;
+            padding-left: 225px;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+        &__th {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 225px;
+            float: left;
+            color: @c-gray;
+        }
+    }
+}
+
+@media(max-width: @screen-xs-max) {
+    .table {
+        &_text {
+            font-size: 16px;
+            &__row {
+                padding-left: 175px;
+            }
+            &__th {
+                width: 175px;
+            }
+        }
+    }
+}

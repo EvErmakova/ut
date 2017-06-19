@@ -1,0 +1,133 @@
+//МСБ
+
+extends ../layouts/main
+
+//----------------------------------------------------------------------------------------------------
+
+append includes
+    script(type="text/javascript" src="https://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU")
+
+    script(type="text/javascript" src="../js/map.js")
+
+append content
+
+    .page__wrapper
+
+        ul.breadcrumbs
+            li.breadcrumbs__item
+                a.breadcrumbs__item-link(href="#") Главная
+            li.breadcrumbs__item
+                a.breadcrumbs__item-link(href="#") Юридическим лицам
+            li.breadcrumbs__item
+              span Кредитование бизнеса
+
+    include ../partials/scroller/scroller_comcred
+
+    .page__wrapper
+
+        .page__block
+
+            .widget.widget_col
+
+                .row.widget__list
+
+                    .col-sm-4.widget__item.widget_col__item
+                        .widget_col__item-icon
+                            span.icon.icon_ur
+                        a.widget__item-name(href="#") Кредиты для&nbspюридических лиц
+
+                        .widget__item-text.widget_col__item-text
+                            p Сумма кредита от 50 000 <span class="rouble">a</span>
+                            p Срок до 3 лет
+                            p Ставка от 17% годовых
+
+                    .col-sm-4.widget__item.widget_col__item
+                        .widget_col__item-icon
+                            span.icon.icon_special
+                        a.widget__item-name(href="#") Спецпредложение
+
+                        .widget__item-text.widget_col__item-text
+                            p Сумма кредита до 10 000 000 <span class="rouble">a</span>
+                            p Срок до 5 лет
+                            p Ставка 8,25% годовых
+
+                    .col-sm-4.widget__item.widget_col__item
+                        .widget_col__item-icon
+                            span.icon.icon_garanty
+                        a.widget__item-name(href="#") Банковская гарантия
+
+                        .widget__item-text.widget_col__item-text
+                            p Сумма гарантии от 50 000 <span class="rouble">a</span>
+                            p Срок до 3 лет
+                            p Стоимость от 1,5% годовых
+
+        .page__block.page__block_services
+
+            .widget.widget_services.widget_services-l
+
+                .row.widget__list.widget_services__list.widget_services-l__list
+
+                    a.col-sm-6.widget__item.widget_services__item.widget_services-l__item(href="#")
+
+                        .widget_services-l__item-wrap
+
+                            .widget_services__item-decoration.widget_services-l__item-decoration
+
+                            .widget__item-name.widget_services__item-name.widget_services-l__item-name Заявка на кредит
+
+                        span.icon.icon_cr-request.widget_services-l__item-icon
+                        span.icon.icon_cr-request-w.widget_services-l__item-icon.widget_services-l__item-icon_hover
+
+                    a.col-sm-6.widget__item.widget_services__item.widget_services-l__item(href="#")
+
+                        .widget_services-l__item-wrap
+
+                            .widget_services__item-decoration.widget_services-l__item-decoration
+
+                            .widget__item-name.widget_services__item-name.widget_services-l__item-name Кредитный калькулятор
+
+                        span.icon.icon_cr-calc.widget_services-l__item-icon
+                        span.icon.icon_cr-calc-w.widget_services-l__item-icon.widget_services-l__item-icon_hover
+
+        .page__block
+            .tizer.tizer_big
+                .row
+                    .col-sm-4
+                        .tizer_big__name Уралтрансбанк — <br/>один из&nbsp;самых надежных банков Урала и Свердловской области
+                    .col-sm-8
+                        p Банк традиционно активно поддерживает реальный сектор экономики. В&nbsp;приоритетном порядке кредитует клиентов сельского хозяйства, пищевой и легкой промышленности, а также клиентов участвующих в&nbsp;импортозамещении.
+                        .accordion.js-accordion
+                            p Мы активно поддерживаем малое и среднее предпринимательство и осуществляем кредитование бизнеса. Работая с&nbsp;нами, вы можете получить кредит на&nbsp;развитие малого бизнеса на&nbsp;индивидуальных условиях. Положитесь на&nbsp;нас в&nbsp;любых вопросах, касающихся роста и развития вашего бизнеса.
+                        button.link.link_color_green.link_more.js-accordion__btn
+
+        .page__block
+
+            h2.page__h2 Преимущества
+
+            .row.list.list_ol.list_decorate
+
+                .col-sm-6.list__item.list_ol__item.list_decorate__item Гибкий подход к&nbsp;обеспечению (страхование залога не&nbsp;требуется)
+                .col-sm-6.list__item.list_ol__item.list_decorate__item Удобные схемы погашения кредита
+                .col-sm-6.list__item.list_ol__item.list_decorate__item Индивидуальный, доверительный подход к&nbsp;каждому клиенту
+                .col-sm-6.list__item.list_ol__item.list_decorate__item Помощь персонального менеджера при оформлении кредита
+
+                .col-sm-12
+                    .row.accordion.js-accordion
+                        .flex.flex-wrap_wrap
+                            .col-sm-6.list__item.list_ol__item.list_decorate__item Использование признанных мировых кредитных продуктов
+                            .col-sm-6.list__item.list_ol__item.list_decorate__item Анализ реального финансового состояния бизнеса
+                            .col-sm-6.list__item.list_ol__item.list_decorate__item Сбор информации на&nbsp;месте
+                            .col-sm-6.list__item.list_ol__item.list_decorate__item Рыночные процентные ставки
+                            .col-sm-6.list__item.list_ol__item.list_decorate__item Гибкий подход к&nbsp;обеспечению
+                            .col-sm-6.list__item.list_ol__item.list_decorate__item Удобные схемы гашения кредита
+                            .col-sm-6.list__item.list_ol__item.list_decorate__item При наличии кредитной истории возможны индивидуальные условия кредитования
+
+                    button.link.link_color_green.link_more.js-accordion__btn
+
+        .page__block
+
+            .map
+
+                h2.page__h2 Отделения, предоставляющие данную услугу:
+
+                #map

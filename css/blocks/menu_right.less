@@ -1,0 +1,31 @@
+.menu {
+  &_right {
+    border: 1px solid @c-yellow;
+    &__list {
+      .clearfix;
+    }
+    &__item {
+      display: block;
+      float: none;
+    }
+    &__item-link {
+      padding: 8px 20px 8px 13px;
+      border-left: 7px solid transparent;
+      font-size: @fs-small;
+      line-height: 22px;
+      color: @c-green;
+      .transition(.2s);
+      &:hover,
+      &_active {
+        background: @c-lite-gray;
+      }
+      &:hover {
+        color: @c-red;
+      }
+      &_active {
+        border-left-color: @c-yellow;
+        color: @c-black !important;
+      }
+    }
+  }
+}

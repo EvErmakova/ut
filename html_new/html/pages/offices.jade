@@ -1,0 +1,499 @@
+//Офисы
+
+extends ../layouts/main
+
+//----------------------------------------------------------------------------------------------------
+
+append includes
+    script(type="text/javascript" src="https://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU")
+
+    script(type="text/javascript" src="../js/map.js")
+
+append content
+
+    .page__wrapper
+
+        .page__block
+
+            h1.page__name Офисы и банкоматы
+
+            .js-tabs
+
+                .row.page__menu
+
+                    .col-md-5.col-sm-4
+
+                        ul.toggle
+                            li.toggle__switch.js-toggle__switch
+                            li.toggle__item
+                                a.toggle__item-link.js-toggle__item(href="#maps-tab-1") Офисы
+                            li.toggle__item
+                                a.toggle__item-link.js-toggle__item(href="#maps-tab-2") Банкоматы
+
+                        a.link.link_color_green.ff-medium.hidden-sm(href="#")
+                            span.icon.icon_main-office-g.link__icon
+                            |Головной офис
+
+                    .col-md-7.col-sm-8.text_right
+
+                        .row
+
+                            .col-md-6.col-sm-7
+
+                                a.link.link_color_green.ff-medium.visible-sm(href="#")
+                                    span.icon.icon_main-office-g.link__icon
+                                    | Головной офис
+
+                                a.link.link_color_green.ff-medium(href="#")
+                                    span.file.file_yellow xls
+                                    | Скачать
+
+                                a.link.link_color_green.ff-medium.hidden-sm(href="#")
+                                    span.icon.icon_print-g.link__icon
+                                    | Напечатать
+
+                            .col-md-6.col-sm-5
+
+                                .search
+                                    form.search__form
+                                        input.input.input_b-color_yellow.search__input(type="text" placeholder="Найти")
+                                        span.icon_search-g.search__icon
+
+                #maps-tab-1
+
+                    form.filter
+
+                        .more-btn.visible-sm.js-accordion__btn Выбор услуг
+
+                        .accordion_mobile.js-accordion
+
+                            .row
+
+                                .col-lg-2.col-sm-3.col-xs-6
+                                    .filter__item
+                                        input.checkbox(type="checkbox" id="filter1" checked)
+                                        label(for="filter1")
+                                        label(for="filter1")
+                                            |Сейчас работает&nbsp;
+                                            span.color_gray (46)
+                                .col-lg-2.col-sm-3.col-xs-6
+                                    .filter__item
+                                        input.checkbox(type="checkbox" id="filter2")
+                                        label(for="filter2")
+                                        label(for="filter2")
+                                            |Денежные переводы&nbsp;
+                                            span.color_gray (49)
+                                .col-lg-2.col-sm-3.col-xs-6
+                                    .filter__item
+                                        input.checkbox(type="checkbox" id="filter3")
+                                        label(for="filter3")
+                                        label(for="filter3")
+                                            |Банковские карты&nbsp;
+                                            span.color_gray (49)
+                                .col-lg-2.col-sm-3.col-xs-6
+                                    .filter__item
+                                        input.checkbox(type="checkbox" id="filter4")
+                                        label(for="filter4")
+                                        label(for="filter4")
+                                            |Индивидуальные сейфовые ячейки&nbsp;
+                                            span.color_gray (3)
+                                .col-lg-2.col-sm-3.col-xs-6
+                                    .filter__item
+                                        input.checkbox(type="checkbox" id="filter5")
+                                        label(for="filter5")
+                                        label(for="filter5")
+                                            |Платежи&nbsp;
+                                            span.color_gray (49)
+                                .col-lg-2.col-sm-3.col-xs-6
+                                    .filter__item
+                                        input.checkbox(type="checkbox" id="filter6")
+                                        label(for="filter6")
+                                        label(for="filter6")
+                                            |Векселя&nbsp;
+                                            span.color_gray (4)
+                                .col-lg-2.col-sm-3.col-xs-6
+                                    .filter__item
+                                        input.checkbox(type="checkbox" id="filter7")
+                                        label(for="filter7")
+                                        label(for="filter7")
+                                            |Драгоценные металлы&nbsp;
+                                            span.color_gray (17)
+                                .col-lg-2.col-sm-3.col-xs-6
+                                    .filter__item
+                                        input.checkbox(type="checkbox" id="filter8")
+                                        label(for="filter8")
+                                        label(for="filter8")
+                                            |Кредитование&nbsp;
+                                            span.color_gray (49)
+                                .col-lg-2.col-sm-3.col-xs-6
+                                    .filter__item
+                                        input.checkbox(type="checkbox" id="filter9")
+                                        label(for="filter9")
+                                        label(for="filter9")
+                                            |Кредитование бизнеса&nbsp;
+                                            span.color_gray (50)
+                                .col-lg-2.col-sm-3.col-xs-6
+                                    .filter__item
+                                        input.checkbox(type="checkbox" id="filter10")
+                                        label(for="filter10")
+                                        label(for="filter10")
+                                            |Обмен валюты&nbsp;
+                                            span.color_gray (48)
+                                .col-lg-2.col-sm-3.col-xs-6
+                                    .filter__item
+                                        input.checkbox(type="checkbox" id="filter11")
+                                        label(for="filter11")
+                                        label(for="filter11")
+                                            |Расчетно-кассовое обслуживание&nbsp;
+                                            span.color_gray (48)
+                                .col-lg-2.col-sm-3.col-xs-6
+                                    .filter__item
+                                        input.checkbox(type="checkbox" id="filter12")
+                                        label(for="filter12")
+                                        label(for="filter12")
+                                            |Валютный контроль&nbsp;
+                                            span.color_gray (4)
+                                .col-lg-2.col-sm-3.col-xs-6
+                                    .filter__item
+                                        input.checkbox(type="checkbox" id="filter13")
+                                        label(for="filter13")
+                                        label(for="filter13")
+                                            |Интерклиент&nbsp;
+                                            span.color_gray (49)
+                                .col-lg-2.col-sm-3.col-xs-6
+                                    .filter__item
+                                        input.checkbox(type="checkbox" id="filter14")
+                                        label(for="filter14")
+                                        label(for="filter14")
+                                            |Интернет-банк&nbsp;
+                                            span.color_gray (49)
+                                .col-lg-2.col-sm-3.col-xs-6
+                                    .filter__item
+                                        input.checkbox(type="checkbox" id="filter15")
+                                        label(for="filter15")
+                                        label(for="filter15")
+                                            |Мобильный банк&nbsp;
+                                            span.color_gray (46)
+                                .col-lg-2.col-sm-3.col-xs-6
+                                    .filter__item
+                                        input.checkbox(type="checkbox" id="filter16" checked)
+                                        label(for="filter16")
+                                        label(for="filter16")
+                                            |Зарплатный проект&nbsp;
+                                            span.color_gray (40)
+                                .col-lg-2.col-sm-3.col-xs-6
+                                    .filter__item
+                                        input.checkbox(type="checkbox" id="filter17")
+                                        label(for="filter17")
+                                        label(for="filter17")
+                                            |Корпоративные карты&nbsp;
+                                            span.color_gray (48)
+                                .col-lg-2.col-sm-3.col-xs-6
+                                    .filter__item
+                                        input.checkbox(type="checkbox" id="filter18")
+                                        label(for="filter18")
+                                        label(for="filter18")
+                                            |Торговый эквайринг&nbsp;
+                                            span.color_gray (44)
+                                .col-lg-2.col-sm-3.col-xs-6
+                                    .filter__item
+                                        input.checkbox(type="checkbox" id="filter19")
+                                        label(for="filter19")
+                                        label(for="filter19")
+                                            |Инкассация&nbsp;
+                                            span.color_gray (19)
+                                .col-lg-2.col-sm-3.col-xs-6
+                                    .filter__item
+                                        input.checkbox(type="checkbox" id="filter20")
+                                        label(for="filter20")
+                                        label(for="filter20")
+                                            |Вклады&nbsp;
+                                            span.color_gray (47)
+                                .col-lg-2.col-sm-3.col-xs-6
+                                    .filter__item
+                                        input.checkbox(type="checkbox" id="filter21")
+                                        label(for="filter21")
+                                        label(for="filter21")
+                                            |Депозиты&nbsp;
+                                            span.color_gray (31)
+                                .col-lg-2.col-sm-3.col-xs-6
+                                    .filter__item
+                                        input.checkbox(type="checkbox" id="filter22")
+                                        label(for="filter22")
+                                        label(for="filter22")
+                                            |Векселя&nbsp;
+                                            span.color_gray (4)
+                                .col-lg-2.col-sm-3.col-xs-6
+                                    .filter__item
+                                        input.checkbox(type="checkbox" id="filter23")
+                                        label(for="filter23")
+                                        label(for="filter23")
+                                            |Документарные операции&nbsp;
+                                            span.color_gray (9)
+                                .col-lg-2.col-sm-3.col-xs-12
+                                    button.btn.btn_bg_gray.btn_little.filter__btn Сбросить
+                                        span.icon.icon_arrow-repeat-g.btn__icon_right
+
+                    .js-tabs
+
+                        .text_center
+
+                            ul.toggle_l
+                                li.toggle_l__item
+                                    a.toggle_l__item-link(href="#office-tab-1") Карта
+                                li.toggle_l__switch.js-toggle_l__switch
+                                    .toggle_l__switcher
+                                        span
+                                li.toggle_l__item
+                                    a.toggle_l__item-link(href="#office-tab-2") Список
+
+                        #office-tab-1
+
+                            #map
+
+                        #office-tab-2
+
+                            .table_decorate__wrap
+
+                                .table_decorate.table_office
+
+                                    .table_decorate__tr
+                                        .table_decorate__th Отделение
+                                        .table_decorate__th Адрес
+                                        .table_decorate__th Телефон
+                                        .table_decorate__th График работы
+
+                                    .table_decorate__tr
+                                        .table_decorate__td
+                                            a.link.link_color_green.js-popup__btn_office(href="#") Дополнительный офис №5 ПАО "Уралтрансбанк"
+                                        .table_decorate__td
+                                            a.link.link_color_green(href="#") Екатеринбург - ул.&nbsp;Азина, д.&nbsp;42
+                                        .table_decorate__td
+                                            span.color_gray +7 (343)
+                                            | &nbsp;370-15-71
+                                            br
+                                            | &nbsp;353-87-52
+                                        .table_decorate__td
+                                            span Пн - Пт: 09:00 - 19:00
+                                            br
+                                            span Сб: 10:00 - 17:00
+                                            br
+                                            span.color_gray Вс: выходной
+
+                                    .table_decorate__tr
+                                        .table_decorate__td
+                                            a.link.link_color_green.js-popup__btn_office(href="#") Дополнительный офис №3 ПАО "Уралтрансбанк"
+                                        .table_decorate__td
+                                            a.link.link_color_green(href="#") Екатеринбург - ул.&nbsp;Академика Шварца, 10, корп.&nbsp;1
+                                        .table_decorate__td
+                                            span.color_gray +7 (343)
+                                            | &nbsp;214-76-05
+                                        .table_decorate__td
+                                            span Пн - Пт: 09:00 - 19:00
+                                            br
+                                            span.color_gray Сб: выходной
+                                            br
+                                            span.color_gray Вс: выходной
+
+                                    .table_decorate__tr
+                                        .table_decorate__td
+                                            a.link.link_color_green.js-popup__btn_office(href="#") Дополнительный офис №6 ПАО "Уралтрансбанк"
+                                        .table_decorate__td
+                                            a.link.link_color_green(href="#") Екатеринбург - ул.&nbsp;Заводская, д.&nbsp;12
+                                        .table_decorate__td
+                                            span.color_gray +7 (343)
+                                            | &nbsp;232-54-94
+                                        .table_decorate__td
+                                            span Пн - Пт: 09:00 - 19:00
+                                            br
+                                            span.color_gray Сб: выходной
+                                            br
+                                            span.color_gray Вс: выходной
+
+                                    .table_decorate__tr
+                                        .table_decorate__td
+                                            a.link.link_color_green.js-popup__btn_office(href="#") Центральный офис ПАО "Уралтрансбанк"
+                                        .table_decorate__td
+                                            a.link.link_color_green(href="#") Екатеринбург - ул.&nbsp;Мельковская, 2б
+                                        .table_decorate__td
+                                            span.color_gray +7 (343)
+                                            | &nbsp;232-54-94
+                                        .table_decorate__td
+                                            span Пн - Пт: 09:00 - 19:00
+                                            br
+                                            span.color_gray Сб: выходной
+                                            br
+                                            span.color_gray Вс: выходной
+
+                                    .table_decorate__tr
+                                        .table_decorate__td
+                                            a.link.link_color_green.js-popup__btn_office(href="#") Дополнительный офис №2 ПАО "Уралтрансбанк"
+                                        .table_decorate__td
+                                            a.link.link_color_green(href="#") Екатеринбург - ул.&nbsp;Радищева, д.&nbsp;31
+                                        .table_decorate__td
+                                            span.color_gray +7 (343)
+                                            | &nbsp;379-74-27
+                                            br
+                                            | &nbsp;353-87-52
+                                        .table_decorate__td
+                                            span Пн - Пт: 09:00 - 20:00
+                                            br
+                                            span Сб, Вс: 10:00 - 17:00
+
+                #maps-tab-2
+
+                    form.filter
+
+                        .more-btn.visible-sm.js-accordion__btn Выбор услуг
+
+                        .accordion_mobile.js-accordion
+
+                            .row
+
+                                .col-lg-2.col-sm-3.col-xs-6
+                                    .filter__item
+                                        input.checkbox(type="checkbox" id="filter21" checked)
+                                        label(for="filter21")
+                                        label(for="filter21")
+                                            | Сейчас работает&nbsp;
+                                            span.color_gray (132)
+                                .col-lg-2.col-sm-3.col-xs-6
+                                    .filter__item
+                                        input.checkbox(type="checkbox" id="filter22")
+                                        label(for="filter22")
+                                        label(for="filter22")
+                                            | Работает круглосуточно&nbsp;
+                                            span.color_gray (74)
+                                .col-lg-2.col-sm-3.col-xs-6
+                                    .filter__item
+                                        input.checkbox(type="checkbox" id="filter23")
+                                        label(for="filter23")
+                                        label(for="filter23")
+                                            | Внесение наличных&nbsp;
+                                            span.color_gray (34)
+                                .col-lg-2.col-sm-3.col-xs-6
+                                    .filter__item
+                                        input.checkbox(type="checkbox" id="filter24")
+                                        label(for="filter24")
+                                        label(for="filter24")
+                                            | Оплата услуг&nbsp;
+                                            span.color_gray (143)
+                                .col-lg-2.col-sm-3.col-xs-6
+                                    .filter__item
+                                        input.checkbox(type="checkbox" id="filter25")
+                                        label(for="filter25")
+                                        label(for="filter25")
+                                            | Перевод на карту Visa и MasterCard любого банка&nbsp;
+                                            span.color_gray (49)
+                                .col-lg-2.col-sm-3.col-xs-12
+                                    button.btn.btn_bg_gray.btn_little.filter__btn Сбросить
+                                        span.icon.icon_arrow-repeat-g.btn__icon_right
+
+                    .js-tabs
+
+                        .text_center
+
+                            ul.toggle_l
+                                li.toggle_l__item
+                                    a.toggle_l__item-link(href="#office-tab-1") Карта
+                                li.toggle_l__switch.js-toggle_l__switch
+                                    .toggle_l__switcher
+                                        span
+                                li.toggle_l__item
+                                    a.toggle_l__item-link(href="#office-tab-2") Список
+
+                        #office-tab-1
+
+
+
+                        #office-tab-2
+
+                            .table_decorate__wrap
+
+                                .table_decorate.table_office
+
+                                    .table_decorate__tr
+                                        .table_decorate__th Отделение
+                                        .table_decorate__th Адрес
+                                        .table_decorate__th Телефон
+                                        .table_decorate__th График работы
+
+                                    .table_decorate__tr
+                                        .table_decorate__td
+                                            a.link.link_color_green.js-popup__btn_office(href="#") Дополнительный офис №5 ПАО "Уралтрансбанк"
+                                        .table_decorate__td
+                                            a.link.link_color_green(href="#") Екатеринбург - ул.&nbsp;Азина, д.&nbsp;42
+                                        .table_decorate__td
+                                            span.color_gray +7 (343)
+                                            | &nbsp;370-15-71
+                                            br
+                                            | &nbsp;353-87-52
+                                        .table_decorate__td
+                                            span Пн - Пт: 09:00 - 19:00
+                                            br
+                                            span Сб: 10:00 - 17:00
+                                            br
+                                            span.color_gray Вс: выходной
+
+                                    .table_decorate__tr
+                                        .table_decorate__td
+                                            a.link.link_color_green.js-popup__btn_office(href="#") Дополнительный офис №3 ПАО "Уралтрансбанк"
+                                        .table_decorate__td
+                                            a.link.link_color_green(href="#") Екатеринбург - ул.&nbsp;Академика Шварца, 10, корп.&nbsp;1
+                                        .table_decorate__td
+                                            span.color_gray +7 (343)
+                                            | &nbsp;214-76-05
+                                        .table_decorate__td
+                                            span Пн - Пт: 09:00 - 19:00
+                                            br
+                                            span.color_gray Сб: выходной
+                                            br
+                                            span.color_gray Вс: выходной
+
+                                    .table_decorate__tr
+                                        .table_decorate__td
+                                            a.link.link_color_green.js-popup__btn_office(href="#") Дополнительный офис №6 ПАО "Уралтрансбанк"
+                                        .table_decorate__td
+                                            a.link.link_color_green(href="#") Екатеринбург - ул.&nbsp;Заводская, д.&nbsp;12
+                                        .table_decorate__td
+                                            span.color_gray +7 (343)
+                                            | &nbsp;232-54-94
+                                        .table_decorate__td
+                                            span Пн - Пт: 09:00 - 19:00
+                                            br
+                                            span.color_gray Сб: выходной
+                                            br
+                                            span.color_gray Вс: выходной
+
+                                    .table_decorate__tr
+                                        .table_decorate__td
+                                            a.link.link_color_green.js-popup__btn_office(href="#") Центральный офис ПАО "Уралтрансбанк"
+                                        .table_decorate__td
+                                            a.link.link_color_green(href="#") Екатеринбург - ул.&nbsp;Мельковская, 2б
+                                        .table_decorate__td
+                                            span.color_gray +7 (343)
+                                            | &nbsp;232-54-94
+                                        .table_decorate__td
+                                            span Пн - Пт: 09:00 - 19:00
+                                            br
+                                            span.color_gray Сб: выходной
+                                            br
+                                            span.color_gray Вс: выходной
+
+                                    .table_decorate__tr
+                                        .table_decorate__td
+                                            a.link.link_color_green.js-popup__btn_office(href="#") Дополнительный офис №2 ПАО "Уралтрансбанк"
+                                        .table_decorate__td
+                                            a.link.link_color_green(href="#") Екатеринбург - ул.&nbsp;Радищева, д.&nbsp;31
+                                        .table_decorate__td
+                                            span.color_gray +7 (343)
+                                            | &nbsp;379-74-27
+                                            br
+                                            | &nbsp;353-87-52
+                                        .table_decorate__td
+                                            span Пн - Пт: 09:00 - 20:00
+                                            br
+                                            span Сб, Вс: 10:00 - 17:00
+
+append popups
+    include ../partials/popup/popup_office

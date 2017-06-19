@@ -1,0 +1,35 @@
+.file {
+    position: relative;
+    top: -2px;
+    display: inline-block;
+    margin-right: 7px;
+    padding: 5px 11px 4px;
+    vertical-align: middle;
+    font-size: @fs-small;
+    line-height: 1;
+    color: @c-gray;
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        width: 0;
+        height: 0;
+    }
+    &:before {
+        border-bottom: 9px solid;
+        border-right: 9px solid transparent;
+    }
+    &:after {
+        border-top: 9px solid #fff;
+        border-left: 9px solid transparent;
+    }
+    &_yellow {
+        background: @c-yellow;
+        &:before {
+            border-bottom-color: @c-dark-yellow;
+        }
+    }
+}

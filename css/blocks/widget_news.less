@@ -1,0 +1,31 @@
+.widget {
+  &_news {
+    &__list {
+      margin-bottom: 50px;
+    }
+    &__item {
+      margin-bottom: 30px;
+    }
+    &__item-text {
+      margin-top: 5px;
+      line-height: 28px;
+    }
+  }
+}
+
+@media(max-width: @screen-xs-max) {
+  .widget {
+    &_news {
+      &__list {
+        margin-bottom: 0;
+      }
+      &__item {
+        margin-bottom: 15px;
+        &:not(:last-of-type) {
+          padding-bottom: 10px;
+          border-bottom: 1px solid @c-lite-gray;
+        }
+      }
+    }
+  }
+}

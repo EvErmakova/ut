@@ -1,0 +1,116 @@
+.balloon {
+    width: 290px;
+    .shadow(0px 19px 27px 0px rgba(87, 82, 77, 0.4));
+    &__close {
+        position: absolute;
+        top: 10px;
+        left: 266px;
+        height: 14px;
+        width: 14px;
+        .transition(.2s);
+        &:before,&:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: block;
+            height: 2px;
+            width: 18px;
+            background: @c-black;
+        }
+        &:before {
+            .transform(translate(-50%,-50%) rotate(-45deg));
+        }
+        &:after {
+            .transform(translate(-50%,-50%) rotate(45deg));
+        }
+        &:hover {
+            opacity: .7;
+        }
+    }
+    &__arrow {
+        position: absolute;
+        top: 30px;
+        left: -20px;
+        width: 0;
+        height: 0;
+        border-bottom: 25px solid #fff;
+        border-left: 20px solid transparent;
+    }
+    &__content {
+        padding: 25px 25px 30px;
+        background: @c-white;
+        font-size: 14px;
+        line-height: 22px;
+    }
+    &__block {
+        position: relative;
+        margin: 0 0 10px;
+        padding-left: 30px;
+        &:before {
+            content: '';
+            .icon;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+        }
+    }
+    &__name {
+        margin: 0 0 15px;
+        .ff-medium;
+        font-size: @fs-base;
+        line-height: 24px;
+    }
+    &__address {
+        &:before {
+            width: 15px;
+            background-image: url('@{img}icons/svg/map-marker.svg');
+        }
+    }
+    &__type {
+        &-name {
+            margin-bottom: 5px;
+            .link {
+                border-bottom: 1px dotted;
+            }
+            &_individual {
+                &:before {
+                    width: 16px;
+                    background-image: url('@{img}icons/svg/person.svg');
+                }
+            }
+            &_juridical {
+                &:before {
+                    width: 16px;
+                    background-image: url('@{img}icons/svg/case.svg');
+                }
+            }
+        }
+    }
+    &__info {
+        margin: 0 0 15px;
+        padding-left: 30px;
+        font-size: 12px;
+        line-height: 16px;
+        color: @c-gray;
+    }
+    &__time {
+        &:before {
+            width: 16px;
+            background-image: url('@{img}icons/svg/clock.svg');
+        }
+    }
+    &__number {
+        &:before {
+            width: 16px;
+            background-image: url('@{img}icons/svg/call.svg');
+        }
+        &-wp {
+            padding-left: 60px;
+        }
+    }
+    .btn {
+        margin-top: 15px;
+    }
+}

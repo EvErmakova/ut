@@ -1,0 +1,73 @@
+.link {
+  .ff-base;
+  text-decoration: none;
+  color: inherit;
+  .transition(.2s);
+  cursor: pointer;
+  &:hover {
+    color: @c-red !important;
+  }
+  &_color {
+    &_gray {
+      color: @c-gray;
+    }
+    &_green {
+      color: @c-green;
+    }
+  }
+  &__icon {
+    top: -2px;
+    margin-right: 7px;
+    &_right {
+      margin-right: 0;
+      margin-left: 7px;
+    }
+  }
+  &_more {
+    display: inline-block;
+    margin-top: 10px;
+    .ff-bold;
+    &:before {
+      content: 'Читать дальше';
+    }
+    &:after {
+      content: '';
+      .icon;
+      top: -1px;
+      height: 24px;
+      width: 24px;
+      margin-left: 7px;
+      background-image: url('@{img}icons/svg/arrow-circle-right-y.svg');
+    }
+    &.open {
+      &:before {
+        content: 'Свернуть';
+      }
+      &:after {
+        background-image: url('@{img}icons/svg/arrow-circle-left-y.svg');
+      }
+    }
+  }
+}
+
+@media(max-width: @screen-md-max) and (min-width: @screen-md-min) {
+  .link {
+    &__icon {
+      margin-right: 4px;
+      &_right {
+        margin-left: 4px;
+      }
+    }
+  }
+}
+
+@media(max-width: @screen-md-max) {
+  .link {
+    &_more {
+      &:after {
+        height: 20px;
+        width: 20px;
+      }
+    }
+  }
+}

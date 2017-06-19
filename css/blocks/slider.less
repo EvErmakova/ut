@@ -1,0 +1,116 @@
+.ui-slider {
+  position: relative;
+  height: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  background: @c-lite-gray;
+  &-range {
+    height: 10px;
+    border-radius: 5px;
+    background: @c-green linear-gradient(to right, @c-yellow-30, transparent);
+  }
+  &-handle {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-top: -10px;
+    margin-left: -15px;
+    border-radius: 100%;
+    background: #fff;
+    .box-shadow(0px 4px 10px 0px rgba(5, 6, 6, 0.2));
+    z-index: 10;
+    &:after {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 20px;
+      background: @c-yellow;
+      border-radius: 100%;
+      .center;
+    }
+  }
+}
+
+.slider {
+  &__scale {
+    position: relative;
+    height: 38px;
+    margin-bottom: 10px;
+    &-item {
+      position: absolute;
+      top: 0;
+      display: inline-block;
+      padding-top: 15px;
+      white-space: nowrap;
+      .transform(translateX(-50%));
+      &:before {
+        content: '';
+        .centerX;
+        top: 0;
+        display: block;
+        width: 4px;
+        height: 4px;
+        background: @c-lite-gray;
+      }
+      &:first-of-type {
+        .transform(translateX(0));
+        &:before {
+          display: none;
+        }
+      }
+      &:last-of-type {
+        .transform(translateX(-100%));
+        &:before {
+          display: none;
+        }
+      }
+    }
+    &-link {
+      display: inline-block;
+      color: @c-gray;
+      text-decoration: none;
+      border-bottom: 1px dotted @c-gray;
+      .transition(.2s);
+      &:hover {
+        border-bottom-color: transparent;
+      }
+    }
+  }
+}
+
+@media(max-width: @screen-xs-max) {
+  .ui-slider {
+    height: 7px;
+    &-range {
+      height: 7px;
+    }
+    &-handle {
+      width: 26px;
+      height: 26px;
+      margin-left: -13px;
+      &:after {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+  .slider {
+    &__scale {
+      &-item {
+        padding-top: 10px;
+        &:nth-of-type(2),
+        &:nth-of-type(4) {
+          .slider__scale-link {
+            display: none;
+          }
+        }
+      }
+      &-link {
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+  }
+}

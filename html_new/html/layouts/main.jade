@@ -1,0 +1,43 @@
+doctype html
+html
+    head
+        include ../partials/meta/meta
+        title Верстка
+        link(rel="stylesheet" href="../../css/style.css")
+        script(type="text/javascript" src="../js/libs/jquery-3.1.1.min.js")
+        script(type="text/javascript" src="../js/libs/jquery-ui.min.js")
+        script(type="text/javascript" src="../js/libs/modernizr.js")
+        script(type="text/javascript" src="../js/libs/jquery.mousewheel.js")
+        script(type="text/javascript" src="../js/libs/bootstrap.min.js")
+        script(type="text/javascript" src="../js/libs/bootstrap-select.js")
+        script(type="text/javascript" src="../js/libs/jquery.touchSwipe.min.js")
+        script(type="text/javascript" src="../js/libs/jquery.ui.datepicker-ru.js")
+        script(type="text/javascript" src="../js/common.js")
+        block includes
+
+    body.page
+
+        block header
+            include ../partials/header
+
+        block menu
+            include ../partials/menu_top
+            include ../partials/menu_main
+
+        block content
+
+        block footer
+            include ../partials/footer
+
+        block popup
+
+            .shadow.js-shadow
+                include ../partials/popup/popup_bank
+                include ../partials/popup/popup_call
+                include ../partials/popup/popup_login
+                include ../partials/popup/popup_phone
+                include ../partials/popup/popup_question
+                include ../partials/popup/popup_promo1
+                include ../partials/popup/popup_promo2
+                include ../partials/popup/popup_promo3
+                block popups

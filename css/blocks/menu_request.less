@@ -1,0 +1,73 @@
+.menu {
+  &_request {
+    padding: 30px 100px;
+    background: @c-lite-gray;
+    .clearfix;
+    &__item {
+      margin-right: 25px;
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+    &__item-link {
+      margin-bottom: 0;
+      .ff-medium;
+      font-size: @fs-base;
+      line-height: 24px;
+      color: @c-gray;
+      &.active {
+        .ff-bold;
+        color: @c-black;
+      }
+      &:before {
+        color: inherit;
+      }
+      &:not(.active) {
+        &:before {
+          background: none;
+          border: 1px solid @c-gray;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: @screen-md-max){
+  .menu {
+    &_request {
+      padding: 30px 50px;
+    }
+  }
+}
+
+@media(max-width: @screen-xs-max) {
+  .menu {
+    &_request {
+      position: relative;
+      padding: 15px 20px;
+      white-space: nowrap;
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 100px;
+        background: linear-gradient(to left, @c-lite-gray, transparent);
+      }
+      &__item {
+        display: inline-block;
+        float: none;
+        max-width: 70%;
+        margin-right: 15px;
+        white-space: normal;
+        vertical-align: top;
+      }
+      &__item-link {
+        font-size: 14px;
+        line-height: 19px;
+      }
+    }
+  }
+}

@@ -1,0 +1,122 @@
+.scroller.scroller_main.js-scroller
+    .scroller__overflow
+        table.scroller__content.js-scroller__content(style="width: 500%; left: 0%;")
+            tr
+                td
+                    .scroller__banner.scroller_main__banner(style="background-image: url('../pictures/banner-1.jpg');")
+                        .page__wrapper
+                            .row
+                                .col-sm-7
+                                    .scroller__img.scroller_main__img(style="background-image: url('../pictures/banner-1.png');")
+                                .col-sm-5
+                                    .scroller__text
+                                        .circle-decorate.scroller__circle-decorate
+                                            .circle-decorate__item
+                                            .circle-decorate__item
+
+                                        .scroller__name Кредит -
+                                        .scroller__anons не Нобелевская премия, получить может каждый!
+                                        .scroller__btns
+                                            a.btn(href="#") Заказать карту On-line
+                                            a.link.link_color_green.scroller__link(href="#") Подробнее
+                                                span.icon.icon_next.link__icon.link__icon_right
+
+                td
+                    .scroller__banner.scroller_main__banner(style="background-image: url('../pictures/banner-1.jpg');")
+                        .page__wrapper
+                            .row
+                                .col-sm-7
+                                    .scroller__img.scroller_main__img(style="background-image: url('../pictures/banner-1.png');")
+                                .col-sm-5
+                                    .scroller__text
+                                        .circle-decorate.scroller__circle-decorate
+                                            .circle-decorate__item
+                                            .circle-decorate__item
+
+                                        .scroller__name Бизнес кредит
+                                        .scroller__anons не оркестр, можно настроить под себя
+                                        .scroller__btns
+                                            a.btn(href="#") Заказать карту On-line
+                                            a.link.link_color_green.scroller__link(href="#") Подробнее
+                                                span.icon.icon_next.link__icon.link__icon_right
+
+                td
+                    .scroller__banner.scroller_main__banner(style="background-image: url('../pictures/banner-1.jpg');")
+                        .page__wrapper
+                            .row
+                                .col-sm-7
+                                    .scroller__img.scroller_main__img(style="background-image: url('../pictures/banner-1.png');")
+                                .col-sm-5
+                                    .scroller__text
+                                        .circle-decorate.scroller__circle-decorate
+                                            .circle-decorate__item
+                                            .circle-decorate__item
+
+                                        .scroller__name Вклады
+                                        .scroller__anons не цветы, растут без полива
+                                        .scroller__btns
+                                            a.btn(href="#") Заказать карту On-line
+                                            a.link.link_color_green.scroller__link(href="#") Подробнее
+                                                span.icon.icon_next.link__icon.link__icon_right
+
+                td
+                    .scroller__banner.scroller_main__banner(style="background-image: url('../pictures/banner-1.jpg');")
+                        .page__wrapper
+                            .row
+                                .col-sm-7
+                                    .scroller__img.scroller_main__img(style="background-image: url('../pictures/banner-1.png');")
+                                .col-sm-5
+                                    .scroller__text
+                                        .circle-decorate.scroller__circle-decorate
+                                            .circle-decorate__item
+                                            .circle-decorate__item
+
+                                        .scroller__name Карта Visa
+                                        .scroller__anons Желаний много не бывает!
+                                        .scroller__btns
+                                            a.btn(href="#") Заказать карту On-line
+                                            a.link.link_color_green.scroller__link(href="#") Подробнее
+                                                span.icon.icon_next.link__icon.link__icon_right
+
+                td
+                    .scroller__banner.scroller_main__banner(style="background-image: url('../pictures/banner-1.jpg');")
+                        .page__wrapper
+                            .row
+                                .col-sm-7
+                                    .scroller__img.scroller_main__img(style="background-image: url('../pictures/banner-1.png');")
+                                .col-sm-5
+                                    .scroller__text
+                                        .circle-decorate.scroller__circle-decorate
+                                            .circle-decorate__item
+                                            .circle-decorate__item
+
+                                        .scroller__name Сервисы
+                                        .scroller__anons для ведения бизнеса
+                                        .scroller__btns
+                                            a.btn(href="#") Заказать карту On-line
+                                            a.link.link_color_green.scroller__link(href="#") Подробнее
+                                                span.icon.icon_next.link__icon.link__icon_right
+
+        .scroller__nav.scroller_main__nav
+            .page__wrapper
+                a.nav-btn.nav-btn_prev.js-nav-btn_prev(href="javascript:void(0);")
+                    span.icon.icon_prev-w.nav-btn__icon
+                a.nav-btn.nav-btn_next.js-nav-btn_next(href="javascript:void(0);")
+                    span.icon.icon_next-w.nav-btn__icon
+
+    .menu.menu_scroller.js-scroller__menu
+        .page__wrapper
+            ul.menu__list
+                li.menu__item.menu_scroller__item
+                    a.menu__item-link.menu_scroller__item-link.act(href="#") Потребительское кредитование
+                li.menu__item.menu_scroller__item
+                    a.menu__item-link.menu_scroller__item-link(href="#") Кредитование бизнеса
+                li.menu__item.menu_scroller__item
+                    a.menu__item-link.menu_scroller__item-link(href="#") Вклады
+                li.menu__item.menu_scroller__item
+                    a.menu__item-link.menu_scroller__item-link(href="#") Карта Visa
+                li.menu__item.menu_scroller__item
+                    a.menu__item-link.menu_scroller__item-link(href="#") Сервисы для бизнеса
+
+script
+    |var scrollerMain = new Frontend_Banner_Component(['5','5','5','5','30'],'.js-scroller');

@@ -1,0 +1,122 @@
+//Заявка на кредит
+
+extends ../layouts/main
+
+//----------------------------------------------------------------------------------------------------
+
+append content
+
+    include ../partials/scroller/scroller_comcred
+
+    .page__wrapper
+
+        .page__block
+
+            h1.page__name Заявка на кредит
+
+            .row.steps
+
+                .col-sm-4.col-xs-12.steps__item
+                    .steps__item-wrap
+                        .steps__number 1
+                        .steps__text Заполните онлайн заявку&nbsp;— это сэкономит ваше время
+
+                .col-sm-4.col-xs-12.steps__item
+                    .steps__item-wrap
+                        .steps__number 2
+                        .steps__text Индивидуальный подход к&nbsp;каждому клиенту
+
+                .col-sm-4.col-xs-12.steps__item
+                    .steps__item-wrap
+                        .steps__number 3
+                        .steps__text Участие в&nbsp;программе лояльности для&nbsp;клиентов малого и среднего бизнеса
+
+            form.form.form_request
+
+                ul.list_ol.menu__list.menu_request
+                    li.menu__item.menu_request__item
+                        .list_ol__item.list_decorate__item.menu__item-link.menu_request__item-link.active Информация о&nbsp;запрашиваемом кредите
+                    li.menu__item.menu_request__item
+                        .list_ol__item.list_decorate__item.menu__item-link.menu_request__item-link Контактные данные
+
+
+                .form_request__row.form__row_main
+
+                    label.form__label(for="comcred_request_amount") Требуемая сумма&nbsp;
+                        span.rouble.form__info.visible-xs (a)
+                        |:
+                    input.input.input_b-color_yellow#comcred_request_amount(type="text")
+                    span.rouble.hidden-xs a
+                    .tip
+                        .tip__cloud Максимальная сумма кредита, которую банк будет готов Вам предоставить рассчитывается персонально
+
+                .form_request__row
+
+                    .row
+
+                        .col-sm-5
+                            .form__item
+                                label.form__label(for="comcred_request_period") Срок кредита&nbsp;
+                                    span.form__info (мес)
+                                    |:&nbsp;
+                                    span.form__important *
+                                input.input.form__w-tip#comcred_request_period(type="text")
+                                .tip
+                                    .tip__cloud Максимальный срок кредита 60 месяцев
+
+                        .col-sm-7
+                            .form__item
+                                label.form__label() Цель кредита:&nbsp;
+                                    span.form__important *
+
+                                select.selectpicker.form__w-tip
+                                    option(value="1") Закуп товара
+                                    option(value="2") Приобретение основных средств (оборудование)
+                                    option(value="3") Приобретение основных средств (грузовое авто)
+                                    option(value="4") Приобретение основных средств (легковое авто)
+                                    option(value="5") Приобретение недвижимости
+                                    option(value="6") Исполнение госконтракта
+                                    option(value="7") Ремонт, модернизация основных средств
+                                    option(value="8") Иное
+                                .tip
+                                    .tip__cloud Укажите цель получения кредита
+
+                        .col-sm-12
+                            .form__item
+                                label.form__label(for="comcred_request_desc") Описание цели в свободной форме:
+                                textarea.input#comcred_request_desc(rows="4")
+
+                        .col-sm-12
+                            .form__btns.form__btns_right
+                                button.btn.btn_bg_gray.btn_next.js-credit-request-step2 Следующий шаг
+
+
+                .form_request__row(style="display: none;")
+
+                    .row
+
+                        .col-sm-12
+                            .form__item
+                                label.form__label(for="comcred_request_fio") Фамилия, имя, отчество:&nbsp;
+                                    span.form__important *
+                                input.input#comcred_request_fio(type="text")
+
+                        .col-sm-6
+                            .form__item
+                                label.form__label(for="comcred_request_phone") Телефон:&nbsp;
+                                    span.form__important *
+                                input.input#comcred_request_phone(type="text")
+
+                        .col-sm-6
+                            .form__item
+                                label.form__label(for="comcred_request_email") Электронная почта:&nbsp;
+                                    span.form__important *
+                                input.input#comcred_request_email(type="text")
+
+                        .col-sm-12
+                            .form__btns.form__btns_right
+                                button.btn.btn_bg_green-gradient Отправить заявку
+
+            .fs_small.color_gray
+                p Уралтрансбанк оказывает активную поддержку бизнеса. Мы предоставляем полный спектр программ кредитования, предназначенный для&nbsp;малого и среднего бизнеса, обеспечивая организации потенциалом и средствами для&nbsp;успешного роста.
+                p Все, что для этого необходимо – оформить заявку на&nbsp;кредит для бизнеса. Мы обязательно свяжемся с&nbsp;вами.

@@ -1,0 +1,49 @@
+.accordion {
+  display: none;
+  position: relative;
+  &__btn {
+    display: block;
+    width: 100%;
+    .ff-bold();
+    color: @c-green;
+    text-align: center;
+    &.open {
+      .icon {
+        background-image: url('@{img}icons/svg/arrow-top-l-g.svg');
+      }
+    }
+  }
+}
+
+@media(min-width: @screen-md-min) {
+  .accordion {
+    &_mobile {
+      display: block !important;
+    }
+  }
+}
+
+@media(max-width: @screen-sm-max) {
+  .accordion {
+    &__btn {
+      width: calc(~"100% + 30px");
+      margin: 0 -15px;
+      padding: 14px 15px;
+      border-bottom: 1px solid @c-dark-beige;
+      line-height: 20px;
+    }
+    &_mobile {
+      .accordion();
+    }
+  }
+}
+
+@media(max-width: @screen-xs-max) {
+  .accordion {
+    &__btn {
+      font-size: @fs-small;
+      line-height: 18px;
+    }
+
+  }
+}

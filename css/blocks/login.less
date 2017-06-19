@@ -1,0 +1,137 @@
+.login {
+    position: relative;
+    display: inline-block;
+    width: 195px;
+    +.btn {
+        margin-left: 15px;
+    }
+    &__btn {
+        position: relative;
+        margin-right: 12px;
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: -4px;
+            right: -4px;
+            width: 18px;
+            height: 18px;
+            background: @c-green url('@{img}icons/svg/check-w.svg') no-repeat center;
+            -webkit-background-size: 65%;
+            background-size: 65%;
+            border-radius: 100%;
+        }
+    }
+    &__body {
+        display: block;
+        &:hover {
+            .btn {
+                background-color: @c-yellow-40;
+            }
+        }
+    }
+    &__name {
+        display: inline-block;
+        width: 135px;
+        margin: 4px 0 0;
+        .ff-medium;
+        font-size: @fs-base;
+        line-height: 18px;
+    }
+    &__links {
+        margin-left: 57px;
+    }
+    &__exit {
+        .btn {
+            position: relative;
+            width: 24px;
+            height: 24px;
+            padding: 0;
+            .icon {
+                .center;
+            }
+        }
+    }
+}
+
+@media (max-width: @screen-md-max) {
+    .login {
+        display: block;
+        width: 100%;
+        + .btn {
+            margin-left: 0;
+        }
+        .login {
+            &__btn {
+                display: inline-block;
+                width: 42px;
+                padding: 0;
+            }
+            &__body {
+                display: inline-block;
+            }
+            &__name {
+                display: none;
+            }
+            &__links {
+                display: inline-block;
+                margin-left: 0;
+                padding: 10px 0;
+                vertical-align: top;
+                
+            }
+        }
+    }
+}
+
+@media(max-width: @screen-sm-max) {
+    .login {
+        display: inline-block;
+        width: auto;
+        margin-right: 15px;
+        &_open {
+            z-index: 100;
+            &:before {
+                content: '';
+                position: absolute;
+                display: block;
+                top: -15px;
+                left: -15px;
+                right: -15px;
+                bottom: -15px;
+                background: @c-white;
+            }
+        }
+        .login {
+            &__btn {
+                width: 35px;
+                margin-right: 0;
+            }
+        }
+        &__links {
+            display: none;
+            position: absolute;
+            top: 65px;
+            left: 0;
+            right: 0;
+            margin-left: 0;
+            background: @c-white;
+            text-align: center;
+            z-index: 100;
+            .link {
+                display: block;
+                width: auto;
+                &:not(:last-of-type) {
+                    border-bottom: 1px solid @c-lite-gray;
+                }
+            }
+        }
+        &__name {
+            margin: 0;
+            padding: 18px 15px;
+        }
+        &__exit {
+            padding: 15px;
+        }
+    }
+}

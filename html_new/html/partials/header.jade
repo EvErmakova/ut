@@ -1,0 +1,32 @@
+header.header
+    .page__wrapper
+        .row
+            .col-md-2
+                .js-panel-btn_mobile
+                a.logo.header__logo(href="#")
+                    img.logo__img.hidden-sm(src="../../images/utblogo.svg")
+                    img.logo__img.visible-sm(src="../../images/utblogo_mobile.svg")
+            .col-md-10.header__info-blocks
+                .info-block.header__info-block
+                    button.info-block__name.info-block__btn.js-popup_city__btn Екатеринбург
+                    include popup/popup_city
+                    .header__links.js-header__links-1_desktop
+                        a(href="#").link.link_color_gray.header__link
+                            span.icon.icon_map-marker.link__icon
+                            |Отделения и банкоматы
+                .info-block.header__info-block
+                    button.link.info-block__name.js-popup__btn_phone 8-800-1000-767
+                    .header__links.js-header__links-2_desktop
+                        button.link.link_color_gray.header__link.js-popup__btn_call
+                            span.icon.icon_call.link__icon
+                            |Перезвоните мне
+                        button.link.link_color_gray.header__link.js-popup__btn_question
+                            span.icon.icon_question.link__icon
+                            |Задать вопрос
+                .header__btns
+                    button.btn.btn_b-color_gray.js-popup__btn_login
+                        span.icon.icon_person.btn__icon
+                        |Личный кабинет
+                    button.btn.btn_b-color_yellow.js-popup__btn_bank
+                        span.icon.icon_lock.btn__icon
+                        |Интернет-банк

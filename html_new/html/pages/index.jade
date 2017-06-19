@@ -1,0 +1,26 @@
+//Главная
+
+extends ../layouts/main
+
+//----------------------------------------------------------------------------------------------------
+
+append content
+
+    include ../partials/scroller/scroller_main
+
+    .page__wrapper
+
+        .page__block.page__block_services
+
+            include ../partials/widgets/widget_services
+
+        .row.page__block
+
+            .col-md-4.col-sm-6
+                include ../partials/widgets/widget_news
+
+            .col-md-5.col-sm-6
+                include ../partials/widgets/widget_actions
+
+            .col-md-3.col-sm-12
+                include ../partials/widgets/widget_courses

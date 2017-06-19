@@ -1,0 +1,42 @@
+.tizer {
+  &_big {
+    padding: 40px 30px;
+    font-size: @fs-base;
+    line-height: 28px;
+    &__name {
+      margin-bottom: 25px;
+      font-size: @fs-medium;
+      line-height: 28px;
+      color: @c-black;
+    }
+  }
+}
+
+@media(max-width: @screen-md-max) {
+  .tizer {
+    &_big {
+      padding: 30px 25px;
+      font-size: @fs-small;
+      line-height: 26px;
+      &__name {
+        .ff-medium;
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+  }
+}
+
+@media(max-width: @screen-xs-max) {
+  .tizer {
+    &_big {
+      padding: 20px 25px;
+      &__name {
+        margin-bottom: 10px;
+      }
+      .link {
+        margin-top: 5px;
+      }
+    }
+  }
+}

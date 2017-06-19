@@ -1,0 +1,19 @@
+.menu {
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__item {
+    float: left;
+  }
+  &__item-link {
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    &.act {
+      background-color: @c-yellow !important;
+      color: @c-black !important;
+    }
+  }
+}
